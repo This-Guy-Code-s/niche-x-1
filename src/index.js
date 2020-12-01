@@ -8,8 +8,9 @@ import reducer from './redux/reducers'
 import {Provider} from 'react-redux'
 import {applyMiddleware,createStore} from 'redux'
 import thunk from 'redux-thunk'
-import {BrowserRouter as Router} from 'react-router-dom'
-
+import {BrowserRouter as Router,Route} from 'react-router-dom'
+import env from 'dotenv'
+env.config()
 
 
 
@@ -19,11 +20,12 @@ const store = createStore(reducer,applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
-  <Router>
     <Provider store={store}>
-    <App />
-    </Provider>
+  <Router>
+  <Route render={()=><App />}/>
+    
   </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
