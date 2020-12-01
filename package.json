@@ -26,7 +26,7 @@
     "uuid-random": "^1.3.2",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "/",
+  "homepage": "/niche-x-1/",
   "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
