@@ -1,0 +1,31 @@
+.bg-nav{
+  border:none;
+  font-weight:bolder;
+}
+.bg-nav *{
+  border:none;
+}
+
+
+.outter-links{
+  border:1px solid rgba(0,0,0,.2);
+  box-shadow:1px 1px 5px #666;
+  border-radius:100%;
+  font-size:90%;
+  padding:3.5px;
+  background:rgba(0,0,0,.2);
+  background-color:rgba(0,0,0,.2);
+  text-align:center;
+}
+
+
+.outter-links:focus,.outter-links:hover{
+  border:1px solid rgba(0,0,0,.2);
+  box-shadow:0px 0px 5px #999;
+  border-radius:100%;
+  font-size:90%;
+  padding:3.5px;
+  background:rgba(0,0,0,.2);
+  background-color:rgba(0,0,0,.2);
+  text-align:center;
+}

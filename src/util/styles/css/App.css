@@ -1,0 +1,142 @@
+* {
+
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-size: .8rem;
+
+
+}
+
+.App {
+  position:absolute;
+  width:100%;
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  overflow-y:auto;
+}
+
+.Header {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.Main {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.Footer {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+}
+
+
+
+.theme-light,.theme-light:hover,.theme-light:focus{
+  border:none;
+  background-color:#fff;
+  background:#fff;
+  -webkit-text-fill-color:#000;
+  color:#000;
+  font-weight:bolder;
+}
+
+.theme-dark,.theme-dark:hover,.theme-dark:focus{
+  border:none;
+  background-color:#000;
+  background:#000;
+  -webkit-text-fill-color:#fff;
+  color:#fff;
+  font-weight:bolder;
+}
+
+
+.theme-comp-light,.theme-comp-light:hover,.theme-comp-light:focus{
+  border:none;
+  background-color:#777;
+  background:#777;
+  -webkit-text-fill-color:#000;
+  color:#000;
+  font-weight:bolder;
+}
+
+.theme-comp-dark,.theme-comp-dark:hover,.theme-comp-dark:focus{
+  border:none;
+  background-color:#0d0d0d;
+  background:#0d0d0d;
+  -webkit-text-fill-color:#fff;
+  color:#fff;
+  font-weight:bolder;
+}
+
+.theme-txt{
+    -webkit-text-fill-color:#fff;
+  color:#fff;
+}
+
+/*phone up*/
+@media screen and (max-width:600px){
+
+}
+
+/*phone tilt*/
+@media screen and (max-width:900px) and (min-width:600px) and (max-height:600px){
+  
+}
+
+/*tablet up and tilt*/
+@media screen and (max-width:1380px) and (min-width:700px) and (max-height:1380px) and (min-height:700px){
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+@media screen and (max-width:600px){
+
+}
+
+@media screen and (max-width:900px) and (min-width:600px) and (max-height:600px){
+  
+}
+
+@media screen and (max-width:1380px) and (min-width:700px) and (max-height:1380px) and (min-height:700px){
+  
+}
+
+*/

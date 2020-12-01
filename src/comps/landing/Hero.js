@@ -1,18 +1,15 @@
 import React from 'react'
-import './util/styles/css/App.css';
 import {connect} from 'react-redux'
-import Landing from './comps/landing/'
-import Nav from './comps/Nav'
-import Footer from './comps/footer/'
+import {Link} from 'react-router-dom'
 
-class App extends React.Component{
+
+class Hero extends React.Component{
   constructor(props){
     super(props)
     this.state={
 
     }
   }
-
 
 
 componentDidMount(){
@@ -23,11 +20,14 @@ componentDidMount(){
   render(){
 
   return (
-    <div className={`App theme-${this.props.theme}`}>
-      <Nav/>
-      <Landing/>
-      <Footer/>
-    </div>
+       
+<div className='hero'>
+  <div className="hero-one"></div>
+  <div className="hero-two"></div>
+  <h1 className="header-title"><span className="header-primary">$quirt</span><span className="header-sub">Best Porn and Blog Site</span></h1>
+</div>
+
+
   );
 }
   }
@@ -47,4 +47,4 @@ export default connect(
   mapStateToProps,
   {}
 
-  )(App);
+  )(Hero);
