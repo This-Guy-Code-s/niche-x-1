@@ -2,7 +2,7 @@ import bg from '../util/imgs/bg.jpg'
 import ma from '../util/imgs/sqrt.jpg'
 import badd_bitch from '../util/imgs/x.jpeg'
 import {top_video_urls} from './data.js'
-
+import {VIDEOS,LIGHT_MODE} from './actions'
 
 
 import fv1 from '../util/imgs/fv1.png'
@@ -34,7 +34,16 @@ const initialState = {
 
 
 const reducer = (state = initialState, actions) =>{
-	switch(actions){
+	switch(actions.type){
+
+		case LIGHT_MODE:
+			return {
+				...state,
+				theme:actions.payload,
+				theme_comp:actions.payload			}
+
+
+
 		default:
 			return state
 	}

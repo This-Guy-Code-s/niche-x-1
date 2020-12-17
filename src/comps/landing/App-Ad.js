@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 
-class AD4App extends React.Component{
+class Ad4App extends React.Component{
   constructor(props){
     super(props)
     this.state={
@@ -86,7 +86,7 @@ export default connect(
   mapStateToProps,
   {}
 
-  )(AD4App);
+  )(Ad4App);
 
 
 

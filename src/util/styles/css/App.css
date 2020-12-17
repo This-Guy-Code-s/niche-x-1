@@ -26,6 +26,20 @@
   align-items:center;
 
 }
+.header-slide-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:100%;
+  padding:5px;
+  transition:1s ease-in-out;
+  margin:5px;
+}
+
+
+.header-slide-btn i{
+font-size:2rem;
+}
 
 .Main {
   flex:1;
@@ -45,7 +59,24 @@
 
 }
 
+.ad{
+  margin:30px 0px;
+}
 
+
+.link-x{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding-left:15px;
+  padding-bottom:8px;
+  cursor:pointer;
+}
+.link-x:focus,.link-x:hover{
+  text-decoration:underline;
+  text-underline-position:under;
+  
+}
 
 .theme-light,.theme-light:hover,.theme-light:focus{
   border:none;
@@ -55,6 +86,7 @@
   color:#000;
   font-weight:bolder;
 }
+
 
 .theme-dark,.theme-dark:hover,.theme-dark:focus{
   border:none;
@@ -68,15 +100,6 @@
 
 .theme-comp-light,.theme-comp-light:hover,.theme-comp-light:focus{
   border:none;
-  background-color:#777;
-  background:#777;
-  -webkit-text-fill-color:#000;
-  color:#000;
-  font-weight:bolder;
-}
-
-.theme-comp-dark,.theme-comp-dark:hover,.theme-comp-dark:focus{
-  border:none;
   background-color:#0d0d0d;
   background:#0d0d0d;
   -webkit-text-fill-color:#fff;
@@ -84,10 +107,82 @@
   font-weight:bolder;
 }
 
-.theme-txt{
-    -webkit-text-fill-color:#fff;
+.theme-comp-dark,.theme-comp-dark:hover,.theme-comp-dark:focus{
+  border:none;
+  background-color:#111;
+  background:#111;
+  -webkit-text-fill-color:#fff;
   color:#fff;
+  font-weight:bolder;
 }
+
+
+
+
+
+.theme-comp2-light,.theme-comp2-light:hover,.theme-comp2-light:focus{
+  border:none;
+  background-color:transparent;
+  background:transparent;
+  -webkit-text-fill-color:#000;
+  color:#000;
+  font-weight:bolder;
+}
+
+.theme-comp2-dark,.theme-comp2-dark:hover,.theme-comp2-dark:focus{
+  border:none;
+  background-color:transparent;
+  background:transparent;
+  -webkit-text-fill-color:#fff;
+  color:#fff;
+  font-weight:bolder;
+}
+
+
+/*.theme-txt-light, */
+
+.theme-dark small{
+  -webkit-text-fill-color:#fff;
+  color:#fff;
+  text-shadow:0 0 0px #000;
+  font-weight:bolder;
+}
+
+.theme-light small{
+  -webkit-text-fill-color:#000;
+  color:#000;
+  text-shadow:0 0 0px #000;
+  font-weight:bolder;
+}
+
+.theme-dark i{
+  text-shadow:0 0 2px #000;
+}
+
+.theme-light i{
+  text-shadow:0 0 2px #000;
+}
+
+.theme-light-bulb{
+-webkit-text-fill-color:yellow;
+color:yellow;
+animation:glow .5s linear infinite;
+}
+
+
+
+@keyframes glow{
+  from{
+    text-shadow:0 0 8px #000;
+  }
+
+  to{
+
+    text-shadow:0 0 3px #000;
+  }
+}
+
+
 
 /*phone up*/
 @media screen and (max-width:600px){

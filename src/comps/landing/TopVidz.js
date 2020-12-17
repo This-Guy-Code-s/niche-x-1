@@ -22,11 +22,18 @@ componentDidMount(){
  return (
 <div className='container'>
 <header className="topv-header">
-  <h1>Top Videos</h1>
+  {this.props.row2use<1?<h1>Top Videos</h1>:""}
 </header>
+
+
+
+
+{
+  this.props.row2use<1?
+  (
 <div className="band">
   <div className={`item-1 item-all `}>
-    <a href={this.props.top_vidz[0].url} className={`card `}>
+    <a href={this.props.top_vidz[0].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[0].url} height={window.innerWidth<700?"240px":"350px"}/>
       <article>
@@ -36,7 +43,7 @@ componentDidMount(){
     </a>
   </div>
   <div className={`item-2 item-all `}>
-     <a href={this.props.top_vidz[1].url} className={`card `}>
+     <a href={this.props.top_vidz[1].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[1].url} height="240px"/>
       <article>
@@ -46,7 +53,7 @@ componentDidMount(){
     </a>
   </div>
   <div className={`item-3 item-all `}>
-   <a href={this.props.top_vidz[2].url} className={`card `}>
+   <a href={this.props.top_vidz[2].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[2].url} height="240px"/>
       <article>
@@ -55,8 +62,19 @@ componentDidMount(){
       </article>
     </a>
   </div>
+  </div>
+
+
+    )
+
+
+  :
+
+  (
+
+<div className="band">
   <div className={`item-4 item-all `}>
-    <a href={this.props.top_vidz[3].url} className={`card `}>
+    <a href={this.props.top_vidz[3].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[3].url} height="240px"/>
       <article>
@@ -66,7 +84,7 @@ componentDidMount(){
     </a>
   </div>
   <div className={`item-5 item-all `}>
-    <a href={this.props.top_vidz[4].url} className={`card `}>
+    <a href={this.props.top_vidz[4].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[4].url} height="240px"/>
       <article>
@@ -76,7 +94,7 @@ componentDidMount(){
     </a>
   </div>
   <div className={`item-6 item-all `}>
-    <a href={this.props.top_vidz[5].url} className={`card `}>
+    <a href={this.props.top_vidz[5].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[5].url} height="240px"/>
       <article>
@@ -86,7 +104,7 @@ componentDidMount(){
     </a>
   </div>
   <div className={`item-7 item-all `}>
-    <a href={this.props.top_vidz[6].url} className={`card `}>
+    <a href={this.props.top_vidz[6].url} className={`card theme-comp2-${this.props.theme}`}>
       <div className="thumb" ></div>
       <Video url={this.props.top_vidz[6].url} height="240px"/>
       <article>
@@ -95,7 +113,13 @@ componentDidMount(){
       </article>
     </a>
   </div>
-</div>
+  </div>
+    )
+}
+
+
+
+
 </div>
 
 

@@ -55,6 +55,60 @@
 
 
 
+.fa-brain{
+  -webkit-text-fill-color:pink;
+  color:pink;
+}
+
+
+.fa-store-alt{
+  -webkit-text-fill-color:orange;
+  color:orange;
+}
+
+
+.fa-comments{
+  -webkit-text-fill-color:gray;
+  color:gray;
+}
+
+
+.fa-paper-plane{
+  -webkit-text-fill-color:darkslateblue;
+  color:darkslateblue;
+}
+
+
+
+.fa-brain{
+  -webkit-text-fill-color:pink;
+  color:pink;
+}
+
+
+
+
+.fa-globe{
+  -webkit-text-fill-color:skyblue;
+  color:skyblue;
+}
+.fa-layer-group{
+-webkit-text-fill-color:darkslategray;
+  color:darkslategray;
+}
+.fa-question{
+-webkit-text-fill-color:green;
+  color:green;
+}
+.fa-flag {
+-webkit-text-fill-color:red;
+  color:red;
+}
+.fa-cog inner-links{
+-webkit-text-fill-color:#f3fe;
+  color:#f3fe;
+}
+
 /*phone up*/
 @media screen and (max-width:600px){
 .header-primary {

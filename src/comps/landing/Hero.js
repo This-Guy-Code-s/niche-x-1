@@ -1,15 +1,28 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import { Tooltip } from 'reactstrap';
 
 
 class Hero extends React.Component{
   constructor(props){
     super(props)
     this.state={
-
+      tooltipOpen:false
     }
+    this.toggle = this.toggle.bind(this)
+    this.moveDown = this.moveDown.bind(this)
   }
+
+  toggle(){
+    return this.setState({tooltipOpen:!this.state.tooltipOpen})
+  }
+
+
+moveDown(){
+  let spot = document.querySelector("#home")
+ return spot.scrollIntoView()
+}
 
 
 componentDidMount(){
@@ -24,7 +37,13 @@ componentDidMount(){
 <div className='hero'>
   <div className="hero-one"></div>
   <div className="hero-two"></div>
-  <h1 className="header-title"><span className="header-primary">$quirt</span><span className="header-sub">Best Porn and Blog Site</span></h1>
+  <h1 className="header-title"><span className="header-primary">$quirt</span></h1>
+  <div className="header-title" style={{marginTop:"100px"}}>
+      <p><span  id="DisabledAutoHideExample"><button onClick={()=>{return this.moveDown()}} className="btn focus header-slide-btn"><i className="fas fa-arrow-circle-down"></i></button></span>.</p>
+      <Tooltip placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="DisabledAutoHideExample" toggle={this.toggle}>
+        Scroll Down
+      </Tooltip>
+    </div>
 </div>
 
 
@@ -48,3 +67,6 @@ export default connect(
   {}
 
   )(Hero);
+
+
+

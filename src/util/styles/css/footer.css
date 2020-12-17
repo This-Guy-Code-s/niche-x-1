@@ -1,22 +1,27 @@
 
 /*********footer*******************/
-. kilimanjaro_area {
+.kilimanjaro_area {
     position: relative;
     z-index: 1;
-    }
+}
 
 .section_padding_100_70 {
     padding-top: 100px;
     padding-bottom: 70px;
 }
+
 .foo_top_header_one {
     color: #fff;
-}.kilimanjaro_part {
+}
+
+.kilimanjaro_part {
     margin-bottom: 30px;
 }
+
 .foo_top_header_one .kilimanjaro_part > h5 {
     color: #fff;
 }
+
 .kilimanjaro_part h4, .kilimanjaro_part h5 {
     margin-bottom: 30px;
 }
@@ -31,7 +36,7 @@ ul {
     padding: 0;
 }
 .kilimanjaro_bottom_header_one {
-    background-color: #111;
+    background-color: #000;
 }
 .section_padding_20 {
     padding: 20px 0;
