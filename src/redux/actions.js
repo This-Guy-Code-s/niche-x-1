@@ -1,6 +1,10 @@
 import axios from 'axios'
+// --------------------------SEARCH VIDEOS--------------------
 export const VIDEOS = "VIDEOS"
+// TOGGLE DARK MODE-----------------------------------
 export const LIGHT_MODE = "LIGHT_MODE"
+// -------------------DISPLAY NAV LINK STATIC VALUES UPON DROP DOWN---------------------
+export const TGL_DRP_DWN = "TGL_DRP_DWN"
 
 
 
@@ -55,7 +59,10 @@ export const see_catagories = () => dispatch =>{
 
 
 
-
+// -------------------DISPLAY NAV LINK STATIC VALUES UPON DROP DOWN---------------------
+export const toggle_drp_dwn = (bool,rend) => dispatch =>{
+	return dispatch({type:TGL_DRP_DWN,payload:{bool:bool,rend:rend}})
+}
 
 
 

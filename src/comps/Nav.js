@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {toggle_light} from '../redux/actions'
+import {toggle_light,toggle_drp_dwn} from '../redux/actions'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
-import Modal from './modals/'
+import Modal from './drop-downs/'
 
 
 class Navigation extends React.Component{
@@ -14,12 +14,15 @@ dropdownOpen1:false,
 dropdownOpen2:false
     }
     this.toggle=this.toggle.bind(this)
+    this.nav_choice=this.nav_choice.bind(this)
   }
 
 toggle(which){this.setState({[which]:!this.state[which]})}
 
-componentDidMount(){
-  console.log(this.props)
+nav_choice(x){
+  this.props.toggle_drp_dwn(true,x)
+  let goto_drp_dwn = document.querySelector("#nav-val")
+  setTimeout(()=>{return goto_drp_dwn.scrollIntoView()},500)
 }
 
 
@@ -41,11 +44,10 @@ componentDidMount(){
            <DropdownMenu 
            className={`theme-${this.props.theme}`}
            >
-            <Modal fas="fas fa-globe inner-links" buttonLabel="Language" title='Adjust language'/>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Adjust language' onClick={()=>{return this.nav_choice(0)}}><i className="fas fa-globe inner-links"><small>Language</small></i></DropdownItem>
             <DropdownItem  className={`link-x theme-${this.props.theme}`} title='Change britghness' onClick={()=>{console.log('clicked!!');return this.props.toggle_light()}}><i className={`fa${this.props.theme==="dark"?"r":"s"} fa-lightbulb theme-${this.props.theme}-bulb`}><small>Light</small></i></DropdownItem>
-            <Modal fas="fas fa-question inner-links" buttonLabel="Help" title='Need help or guidence?...'/>
-            <Modal fas="fas fa-flag inner-links" buttonLabel="Report" title='Report a bug or problem'/>
-            <Modal fas="fas fa-cog inner-links" buttonLabel="Settings" title='Adjust The Settings To Fit Your Needs.'/>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Need help or guidence?...' onClick={()=>{return this.nav_choice(1)}}><i className="fas fa-question inner-links"><small>Help</small></i></DropdownItem>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Report a bug or problem' onClick={()=>{return this.nav_choice(2)}}><i className="fas fa-flag inner-links"><small>Report</small></i></DropdownItem>
           </DropdownMenu>
         </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpen1} toggle={()=>{return this.toggle('dropdownOpen1')}} 
@@ -59,8 +61,8 @@ componentDidMount(){
           >
             <DropdownItem className={`link-x theme-${this.props.theme}`}title='Buy all your adult needs here'><i className="fas fa-store-alt inner-links"><small>Store</small></i></DropdownItem>
             <DropdownItem className={`link-x theme-${this.props.theme}`} title='See Our Blog'><i className="fas fa-comments inner-links"><small>Blog</small></i></DropdownItem>
-            <Modal fas="fas fa-paper-plane" buttonLabel="Subscribe" title='Stay Updated'/>
-            <Modal fas="fas fa-brain" buttonLabel="Coming Soon..."  title='Whats Coming Next?...'/>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Stay Updated' onClick={()=>{return this.nav_choice(3)}}><i className="fas fa-paper-plane"><small>Subscribe</small></i></DropdownItem>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Whats Coming Next?...' onClick={()=>{return this.nav_choice(4)}}><i className="fas fa-brain"><small>Coming Soon...</small></i></DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <NavItem>
@@ -98,6 +100,6 @@ export default connect(
 
 
   mapStateToProps,
-  {toggle_light}
+  {toggle_light,toggle_drp_dwn}
 
   )(Navigation);

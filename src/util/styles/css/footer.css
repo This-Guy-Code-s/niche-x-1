@@ -72,7 +72,7 @@ p, ul li, ol li {
 ol li, ul li {
     list-style: outside none none;
 }
-.kilimanjaro_widget a {
+.kilimanjaro_widget span, .kilimanjaro_widget a {
     border: 1px solid #333;
     border-radius: 6px;
     color: #888;
@@ -80,6 +80,7 @@ ol li, ul li {
     font-size: 13px;
     margin-bottom: 4px;
     padding: 7px 12px;
+    cursor:pointer;
 }
 ul {
     margin: 0;

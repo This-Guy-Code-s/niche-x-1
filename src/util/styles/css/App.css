@@ -18,6 +18,27 @@
   overflow-y:auto;
 }
 
+
+.drp-dwn-btn-frame{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.drp-dwn-btn{
+  background-color:rgba(242,24,24,.7);
+  background:rgba(242,24,24,.7);
+  max-width:150px;
+  font-weight:bolder;
+  z-index:1111;
+
+}
+
+
+.cs-imgs{
+  width:100%;
+  max-height:250px;
+}
+
 .Header {
   flex:1;
   display:flex;
@@ -141,6 +162,11 @@ font-size:2rem;
 
 /*.theme-txt-light, */
 
+
+.theme-txt{
+  -webkit-text-fill-color:#fff;
+  color:#fff;
+}
 .theme-dark small{
   -webkit-text-fill-color:#fff;
   color:#fff;
@@ -186,6 +212,11 @@ animation:glow .5s linear infinite;
 
 /*phone up*/
 @media screen and (max-width:600px){
+
+  .cs-imgs{
+  width:100%;
+  max-height:150px;
+}
 
 }
 
