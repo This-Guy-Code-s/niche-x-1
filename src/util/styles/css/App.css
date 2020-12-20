@@ -34,9 +34,23 @@
 }
 
 
+.subscribe input ,.report-password textarea,.report-password select{
+    -webkit-text-fill-color:#000;
+  color:#000;
+}
+
 .cs-imgs{
   width:100%;
-  max-height:250px;
+  max-height:225px;
+}
+
+.x-link{
+  text-shadow:0 0 5px red;
+   -webkit-text-fill-color:red;
+  color:red;
+  font-weight: bolder;
+  text-decoration-color: gold;
+  cursor:pointer;
 }
 
 .Header {

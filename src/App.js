@@ -1,5 +1,6 @@
 import React from 'react'
 import './util/styles/css/App.css';
+import './util/styles/sass/nav.scss';
 import {connect} from 'react-redux'
 import Landing from './comps/landing/'
 import Nav from './comps/Nav'

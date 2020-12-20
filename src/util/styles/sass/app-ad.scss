@@ -11,16 +11,13 @@ $color_grey_dark: #a2a2a2;
   margin: 1rem auto;
   box-shadow: 0 3px 7px -1px rgba(#000, .1);
   margin-bottom: 1.6%;
-  background: $color_white;
   line-height: 1.4;
   font-family: sans-serif;
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
   a {
-    color: inherit;
     &:hover {
-      color: $color_prime;
     }
   }
   &:hover {
@@ -58,8 +55,6 @@ $color_grey_dark: #a2a2a2;
     margin: auto;
     transition: left .2s;
     background: rgba(#000, .6);
-    -webkit-text-fill-color: $color_white;
-    color: $color_white;
     padding: 10px;
     width: 100%;
     font-size: .9rem;
@@ -98,13 +93,11 @@ $color_grey_dark: #a2a2a2;
   }
   .description {
     padding: 1rem;
-    background: $color_white;
     position: relative;
     z-index: 1;
     h1,
     h2 {
       font-family: Poppins, sans-serif;
-      -webkit-text-fill-color: #444;
       text-shadow:0 0 5px #999;
     }
     h1 {
@@ -116,17 +109,14 @@ $color_grey_dark: #a2a2a2;
       font-size: 1rem;
       font-weight: 300;
       text-transform: uppercase;
-      color: $color_grey_dark;
       margin-top: 5px;
     }
     .read-more {
       text-align: right;
       a {
-        color: $color_prime;
         display: inline-block;
         position: relative;
         &:after {
-          content: "\f061";
           font-family: FontAwesome;
           margin-left: -10px;
           opacity: 0;
@@ -176,7 +166,6 @@ $color_grey_dark: #a2a2a2;
       &:before {
         transform: skewX(-3deg);
         content: "";
-        background: #fff;
         width: 30px;
         position: absolute;
         left: -10px;

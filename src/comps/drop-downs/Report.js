@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 const Report = (props) => {
   return (
 
-<div class="container forget-password">
+<div class="container-fluid report-password">
             <div class="row">
                 <div class="col-md-12 col-md-offset-4">
                     <div class="panel panel-default">

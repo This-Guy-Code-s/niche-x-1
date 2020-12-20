@@ -1,7 +1,8 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {toggle_light,toggle_drp_dwn} from '../redux/actions'
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 import Modal from './drop-downs/'
 
 
@@ -30,7 +31,7 @@ nav_choice(x){
 
   return (
         <div 
-         className={`theme-${this.props.theme}`}>
+         className={`theme-${this.props.theme} naviola`}>
       <Nav tabs 
       className={`theme-${this.props.theme}`}
       >
@@ -59,15 +60,13 @@ nav_choice(x){
           <DropdownMenu 
           className={`theme-${this.props.theme}`}
           >
-            <DropdownItem className={`link-x theme-${this.props.theme}`}title='Buy all your adult needs here'><i className="fas fa-store-alt inner-links"><small>Store</small></i></DropdownItem>
-            <DropdownItem className={`link-x theme-${this.props.theme}`} title='See Our Blog'><i className="fas fa-comments inner-links"><small>Blog</small></i></DropdownItem>
+            <DropdownItem className={`link-x theme-${this.props.theme}`}title='Buy all your adult needs here'><i className="fas fa-store-alt inner-links"><small><NavLink to="/store" className="inner-links">Store</NavLink></small></i></DropdownItem>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='See Our Blog'><i className="fas fa-comments inner-links"><small><NavLink to="/blog" className="inner-links">Blog</NavLink></small></i></DropdownItem>
             <DropdownItem className={`link-x theme-${this.props.theme}`} title='Stay Updated' onClick={()=>{return this.nav_choice(3)}}><i className="fas fa-paper-plane"><small>Subscribe</small></i></DropdownItem>
             <DropdownItem className={`link-x theme-${this.props.theme}`} title='Whats Coming Next?...' onClick={()=>{return this.nav_choice(4)}}><i className="fas fa-brain"><small>Coming Soon...</small></i></DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavItem>
-          <NavLink href="#"><i className="fas fa-image outter-links"></i></NavLink>
-        </NavItem>
+      
         <Dropdown nav isOpen={this.state.dropdownOpen2} toggle={()=>{return this.toggle('dropdownOpen2')}} 
         className={`theme-${this.props.theme}`}
         >

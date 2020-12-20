@@ -3,8 +3,8 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 const Lango = (props) => {
   return (
-      <footer className="kilimanjaro_area">
-        <div className={`foo_top_header_one section_padding_100_70 theme-comp-dark`} >
+      <footer className="kilimanjaro_area container-fluid">
+        <div className={`foo_top_header_one section_padding_100_70 theme-comp`} >
             <div className="container">
                 <div className="row">
            <div className="col-12 col-md-12 col-lg-12">
