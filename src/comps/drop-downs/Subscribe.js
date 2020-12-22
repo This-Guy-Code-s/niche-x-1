@@ -10,8 +10,25 @@ const NewsLetter = (props) => {
                 <p className="text-center">WE DO NOT SPAM...You will recieve an update news letter about 1-2 times a week at the most.</p>
             </div>
             <form className="form-inline" method="post">
+                    <FormGroup tag="fieldset">
+        <FormGroup check>
+          <Label className="sub-labes" check>
+            <Input type="radio" name="radio1" />
+            Light
+          </Label>
+          <br/>
+          <Label className="sub-labes" check>
+            <Input type="radio" name="radio1" />{' '}
+            Full Subscription
+          </Label>
+        </FormGroup>
+        <FormGroup >
                 <div className="form-group"><input className="form-control" type="email" name="email" placeholder="Email Here..."/></div>
+      </FormGroup>
+        <FormGroup >
                 <div className="form-group"><button className="btn btn-primary" type="submit">Subscribe </button></div>
+      </FormGroup>
+      </FormGroup>
             </form>
         </div>
     </div>

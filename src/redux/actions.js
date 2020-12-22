@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 // --------------------------SEARCH VIDEOS--------------------
 export const VIDEOS = "VIDEOS"
 // TOGGLE DARK MODE-----------------------------------
@@ -115,13 +115,13 @@ export const search_video = (
 
 
 
-axios.post(`http://www.pornhub.com/webmasters/search?search=ebony&thumbsize="medium`)
-	.then(res=>{
-		console.log(res)
-	})
-	.catch(err=>{
-		console.log(err)
-	})
+// axios.post(`${process.env.REACT_APP_HUB_API}/search?search=ebony&thumbsize="medium`)
+// 	.then(res=>{
+// 		console.log(res)
+// 	})
+// 	.catch(err=>{
+// 		console.log(err)
+// 	})
 
 
 

@@ -13,11 +13,12 @@ class TopVidz extends React.Component{
 
 
 componentDidMount(){
-  console.log(this.props)
 }
 
 
   render(){
+
+    //row2use is a prop value that is expected to be passed manual and be a number
 
  return (
 <div className='container'>

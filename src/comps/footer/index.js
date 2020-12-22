@@ -5,20 +5,7 @@ import Video from '../player/'
 class Footer extends React.Component{
 constructor(props){
 	super(props)
-	this.state={
-		sockets:'',
-		mounts:'',
-		tv:'',
-		desk:'',
-		chandelliers:'',
-		gym:'',
-		tredmill:'',
-		mask:'',
-		fans:'',
-        appliances:'',
-        vacuum:'',
 
-	}
 }
 
 
@@ -40,16 +27,14 @@ constructor(props){
                         <div className="kilimanjaro_part">
                             <h6>Most Picked</h6>
                             <ul className=" kilimanjaro_widget">
-                                <li><a href={this.state.sockets}>Vibrator</a></li>
-                                <li><a href={this.state.mounts}>Furniture</a></li>
-                                <li><a href={this.state.tv}>Doll</a></li>
-                                <li><a href={this.state.desk}>Bondage</a></li>
-                                <li><a href={this.state.chandelliers}>Pocket Pussy</a></li>
-                                <li><a href={this.state.tredmill}>Plug</a></li>
-                                <li><a href={this.state.fans}>Auxfun</a></li>
-                                <li><a href={this.state.gym}>Appearence</a></li>
-                                <li><a href={this.state.appliances}>Dildo</a></li>
-                                <li><a href={this.state.vacuum}>One Piece</a></li>
+                            {
+                                this.props.amazon_footer_links.map((amz_lnk,i)=>{
+                                    return (
+
+                                            <li key={i}><a href={amz_lnk.url}>{amz_lnk.name}</a></li>
+                                        )
+                                })
+                            }
                             </ul>
                         </div>
 

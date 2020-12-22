@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import { Tooltip } from 'reactstrap';
-
+import {toggle_drp_dwn} from '../../redux/actions'
 
 class Hero extends React.Component{
   constructor(props){
@@ -20,13 +20,13 @@ class Hero extends React.Component{
 
 
 moveDown(){
+  this.props.toggle_drp_dwn(false,-1)
   let spot = document.querySelector("#home")
  return spot.scrollIntoView()
 }
 
 
 componentDidMount(){
-  console.log(this.props)
 }
 
 
@@ -64,7 +64,7 @@ export default connect(
 
 
   mapStateToProps,
-  {}
+  {toggle_drp_dwn}
 
   )(Hero);
 

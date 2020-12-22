@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {toggle_light,toggle_drp_dwn} from '../redux/actions'
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 import Modal from './drop-downs/'
+import ToolTip from './tool-tip/'
 
 
 class Navigation extends React.Component{
@@ -12,7 +13,8 @@ class Navigation extends React.Component{
     this.state={
 dropdownOpen:false,
 dropdownOpen1:false,
-dropdownOpen2:false
+dropdownOpen2:false,
+dropdownOpen3:false
     }
     this.toggle=this.toggle.bind(this)
     this.nav_choice=this.nav_choice.bind(this)
@@ -25,6 +27,8 @@ nav_choice(x){
   let goto_drp_dwn = document.querySelector("#nav-val")
   setTimeout(()=>{return goto_drp_dwn.scrollIntoView()},500)
 }
+
+
 
 
   render(){
@@ -63,7 +67,42 @@ nav_choice(x){
             <DropdownItem className={`link-x theme-${this.props.theme}`}title='Buy all your adult needs here'><i className="fas fa-store-alt inner-links"><small><NavLink to="/store" className="inner-links">Store</NavLink></small></i></DropdownItem>
             <DropdownItem className={`link-x theme-${this.props.theme}`} title='See Our Blog'><i className="fas fa-comments inner-links"><small><NavLink to="/blog" className="inner-links">Blog</NavLink></small></i></DropdownItem>
             <DropdownItem className={`link-x theme-${this.props.theme}`} title='Stay Updated' onClick={()=>{return this.nav_choice(3)}}><i className="fas fa-paper-plane"><small>Subscribe</small></i></DropdownItem>
-            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Whats Coming Next?...' onClick={()=>{return this.nav_choice(4)}}><i className="fas fa-brain"><small>Coming Soon...</small></i></DropdownItem>
+
+
+ <Dropdown isOpen={this.state.dropdownOpen3} toggle={()=>{return this.toggle('dropdownOpen3')}} >
+      <DropdownToggle caret className={`theme-${this.props.theme}`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
+       <i className="fas fa-brain"  title='Whats Coming Next?...' ><small>Coming Soon...</small></i>
+        </DropdownToggle>
+      <DropdownMenu className={`theme-${this.props.theme}`}>
+       
+                    <DropdownItem disabled header className="notify"><small>Social Media Mobile App</small></DropdownItem>
+              {/*COMING SOON HERE*/}
+          {
+            this.props.coming_soon.map((cmsn,i)=>{
+
+        
+
+                return (
+
+
+
+                    <DropdownItem key={i} header className="notify" ><ToolTip title={cmsn.title} msg={cmsn.msg} date={cmsn.date}/></DropdownItem>
+
+
+                  )
+
+
+
+            })
+          }
+
+            {/*COMING SOON HERE*/}
+
+      </DropdownMenu>
+    </Dropdown>
+
+
+
           </DropdownMenu>
         </Dropdown>
       
@@ -74,10 +113,31 @@ nav_choice(x){
             <i className={`fas fa-bell outter-links theme-${this.props.theme}`}></i>
           </DropdownToggle>
           <DropdownMenu 
-          className={`theme-${this.props.theme}`}
+          className={`theme-${this.props.theme} `}
           >
-            <DropdownItem header className={`theme-${this.props.theme}`}><small><code>{!this.props.notifications?"Nothing Yet...":"Latest News!"}</code></small></DropdownItem>
-            {/*<DropdownItem diabled title={notify.msg}><i className="fas fa-info-circle inner-links"><small>{notify.msg}</small></i></DropdownItem>*/}
+            <DropdownItem header className={`theme-${this.props.theme}`}><small><code>{!this.props.notifications?"Nothing Yet...":`${this.props.notifications.length} Notifications`}</code></small></DropdownItem>
+            {/*NOTIFICATIONS HERE*/}
+          {
+            this.props.notifications.map((notify,i)=>{
+
+            
+
+                return (
+
+
+
+                    <DropdownItem key={i} header className="notify" ><ToolTip title={notify.title} msg={notify.msg} date={notify.date}/></DropdownItem>
+
+
+                  )
+
+
+
+            })
+          }
+
+            {/*NOTIFICATIONS HERE*/}
+
           </DropdownMenu>
         </Dropdown>
       </Nav>

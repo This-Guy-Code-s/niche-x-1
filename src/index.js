@@ -19,14 +19,14 @@ const store = createStore(reducer,applyMiddleware(thunk))
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Provider store={store}>
   <Router>
   <Route render={()=><App />}/>
     
   </Router>
     </Provider>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

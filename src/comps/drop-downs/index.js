@@ -8,7 +8,6 @@ import Languages from './Languages'
 import Help from './Help'
 import Report from './Report'
 import Subscribe from './Subscribe'
-import ComingSoon from './ComingSoon'
 
 
 
@@ -61,12 +60,6 @@ class RenderNavValues extends React.Component{
             )
 
 
-          // {COMPONENT HERE}
-          :this.props.nav_link_2_drp_dwn_render===4?
-          (
-
-            <ComingSoon/>
-            )
 
           // {END}
           :false

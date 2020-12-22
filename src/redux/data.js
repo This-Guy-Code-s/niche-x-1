@@ -44,3 +44,128 @@ export const top_video_urls = [
 		desc:'BANGBROS - Bubble Butt Compilation #2 '
 	}
 ]
+
+
+
+
+export const notifications = [
+	{
+		title:"subscriptions",
+		msg:"If you're subscribed before the anonymous social media feature is merged, you will be granted a life time pro account.",
+		date:"Dec - 2020"
+	},
+
+	{
+		title:"subscriptions",
+		msg:"Emails starting to make you feel a little too nasty? switch to subscription light, where you'll get masked subject titles and informed about the biggest deals and post only.",
+		date:"Dec - 2020"
+	}
+
+]
+
+
+
+export const coming_soon = [
+	{
+		title:"chat",
+		msg:"Chat 1 on 1 or in a open chatroom. Choose an icon, choose a name, and send anyone your link to chat totally anonymously.",
+		date:"March 23rd 2021"
+	},
+
+	{
+		title:"facetime",
+		msg:"Use this platform to facetime others. Difference here is; there are no screenshots, the connection is encrypted, and you dont need an account or any ties to who you are.",
+		date:'May 14th 2021'
+	},
+
+	{
+		title:"Yor Own Blog",
+		msg:"Generate your blog free. Only info needed here is an email. Make a username, a password, verify email, and you have your own blog page. Post images,Videos, & any fun content you want totally anonymously. ",
+		date:'June 1st 2021'
+	}
+
+]
+
+
+
+export const top3_banner = [
+	
+
+
+	{
+		img:"https://www.hubtraffic.com/_affiliate/banners/1543860106.png",
+		
+		url:"https://www.pornhub.com/view_video.php?viewkey=ph5bad8d657eb59&utm_source=domain&utm_medium=banner-paid&utm_campaign=hubtraffic_thusguycodez"
+	},
+
+	{
+		img:"https://www.hubtraffic.com/_affiliate/banners/1544217395.png",
+		
+		url:"http://www.tube8.com/searches.html?q=femdom&utm_source=domain&utm_medium=banner-paid&utm_campaign=hubtraffic_thusguycodez" 
+	},
+
+	{
+		img:"https://www.hubtraffic.com/_affiliate/banners/1543860373.png",
+		
+		url:"https://www.youporn.com?utm_source=domain&utm_medium=banner-paid&utm_campaign=hubtraffic_thusguycodez"
+	}
+
+
+]
+
+
+
+
+export const amazon_footer_links = [
+
+	{
+		name:'Vibrator',
+		url:'/#'
+
+	},
+
+	{
+		name:'Furniture',
+		url:'/#'
+		
+	},
+	{
+		name:'Doll',
+		url:'/#'
+		
+	},
+	{
+		name:'Bondage',
+		url:'/#'
+		
+	},
+	{
+		name:'Pocket Pussy',
+		url:'/#'
+		
+	},
+	{
+		name:'Plug',
+		url:'/#'
+		
+	},
+	{
+		name:'Auxfun',
+		url:'/#'
+		
+	},
+	{
+		name:'Appearence',
+		url:'/#'
+       
+	},
+	{
+		 name:'Dildo',
+		 url:'/#'
+	},
+	{
+      name:'One Piece',
+		url:'/#'
+	}
+
+]

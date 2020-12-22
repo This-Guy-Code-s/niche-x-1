@@ -8,6 +8,12 @@
 
 }
 
+.notify small, .notify{
+  cursor:default;
+  font-size:.6rem;
+}
+
+
 .App {
   position:absolute;
   width:100%;
@@ -18,6 +24,10 @@
   overflow-y:auto;
 }
 
+
+.sub-labes{
+  margin:10px;
+}
 
 .drp-dwn-btn-frame{
   display:flex;
@@ -184,23 +194,23 @@ font-size:2rem;
 .theme-dark small{
   -webkit-text-fill-color:#fff;
   color:#fff;
-  text-shadow:0 0 0px #000;
+  text-shadow:0 0 1px #fff;
   font-weight:bolder;
 }
 
 .theme-light small{
   -webkit-text-fill-color:#000;
   color:#000;
-  text-shadow:0 0 0px #000;
+  text-shadow:0 0 1px #000;
   font-weight:bolder;
 }
 
-.theme-dark i{
-  text-shadow:0 0 2px #000;
+.theme-dark .fas{
+  text-shadow:0 0 1.5px #fff;
 }
 
-.theme-light i{
-  text-shadow:0 0 2px #000;
+.theme-light .fas{
+  text-shadow:0 0 1.5px #000;
 }
 
 .theme-light-bulb{
