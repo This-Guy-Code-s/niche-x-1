@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/niche-x-1/static/css/main.7ac04ac0.chunk.css",
-    "main.js": "/niche-x-1/static/js/main.2aaec8f8.chunk.js",
-    "main.js.map": "/niche-x-1/static/js/main.2aaec8f8.chunk.js.map",
-    "runtime-main.js": "/niche-x-1/static/js/runtime-main.9942f56e.js",
-    "runtime-main.js.map": "/niche-x-1/static/js/runtime-main.9942f56e.js.map",
+    "main.css": "/niche-x-1/static/css/main.b8357db0.chunk.css",
+    "main.js": "/niche-x-1/static/js/main.3111947c.chunk.js",
+    "main.js.map": "/niche-x-1/static/js/main.3111947c.chunk.js.map",
+    "runtime-main.js": "/niche-x-1/static/js/runtime-main.bdf2e567.js",
+    "runtime-main.js.map": "/niche-x-1/static/js/runtime-main.bdf2e567.js.map",
     "static/css/2.1a02f21c.chunk.css": "/niche-x-1/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.c13fb1de.chunk.js": "/niche-x-1/static/js/2.c13fb1de.chunk.js",
-    "static/js/2.c13fb1de.chunk.js.map": "/niche-x-1/static/js/2.c13fb1de.chunk.js.map",
-    "static/js/3.6cc38e35.chunk.js": "/niche-x-1/static/js/3.6cc38e35.chunk.js",
-    "static/js/3.6cc38e35.chunk.js.map": "/niche-x-1/static/js/3.6cc38e35.chunk.js.map",
+    "static/js/2.93e404f9.chunk.js": "/niche-x-1/static/js/2.93e404f9.chunk.js",
+    "static/js/2.93e404f9.chunk.js.map": "/niche-x-1/static/js/2.93e404f9.chunk.js.map",
+    "static/js/3.9191a19d.chunk.js": "/niche-x-1/static/js/3.9191a19d.chunk.js",
+    "static/js/3.9191a19d.chunk.js.map": "/niche-x-1/static/js/3.9191a19d.chunk.js.map",
     "index.html": "/niche-x-1/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/niche-x-1/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.7ac04ac0.chunk.css.map": "/niche-x-1/static/css/main.7ac04ac0.chunk.css.map",
-    "static/js/2.c13fb1de.chunk.js.LICENSE.txt": "/niche-x-1/static/js/2.c13fb1de.chunk.js.LICENSE.txt",
+    "static/css/main.b8357db0.chunk.css.map": "/niche-x-1/static/css/main.b8357db0.chunk.css.map",
+    "static/js/2.93e404f9.chunk.js.LICENSE.txt": "/niche-x-1/static/js/2.93e404f9.chunk.js.LICENSE.txt",
     "static/media/bg.a9119c8c.jpg": "/niche-x-1/static/media/bg.a9119c8c.jpg",
     "static/media/blog.573450c3.jpg": "/niche-x-1/static/media/blog.573450c3.jpg",
     "static/media/chat.6ee01903.png": "/niche-x-1/static/media/chat.6ee01903.png",
@@ -25,10 +25,10 @@
     "static/media/x.58d685b9.jpeg": "/niche-x-1/static/media/x.58d685b9.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9942f56e.js",
+    "static/js/runtime-main.bdf2e567.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.c13fb1de.chunk.js",
-    "static/css/main.7ac04ac0.chunk.css",
-    "static/js/main.2aaec8f8.chunk.js"
+    "static/js/2.93e404f9.chunk.js",
+    "static/css/main.b8357db0.chunk.css",
+    "static/js/main.3111947c.chunk.js"
   ]
 }
