@@ -24,8 +24,7 @@ toggle(which){this.setState({[which]:!this.state[which]})}
 
 nav_choice(x){
   this.props.toggle_drp_dwn(true,x)
-  let goto_drp_dwn = document.querySelector("#nav-val")
-  setTimeout(()=>{return goto_drp_dwn.scrollIntoView()},500)
+  setTimeout(()=>{let goto_drp_dwn = document.querySelector("#nav-val");return goto_drp_dwn.scrollIntoView()},500)
 }
 
 
@@ -49,10 +48,10 @@ nav_choice(x){
            <DropdownMenu 
            className={`theme-${this.props.theme}`}
            >
-            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Adjust language' onClick={()=>{return this.nav_choice(0)}}><i className="fas fa-globe inner-links"><small>Language</small></i></DropdownItem>
+            <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Adjust language' onClick={()=>{return this.nav_choice(0)}}><i className="fas fa-globe inner-links"><small>Language</small></i></NavLink>
             <DropdownItem  className={`link-x theme-${this.props.theme}`} title='Change britghness' onClick={()=>{console.log('clicked!!');return this.props.toggle_light()}}><i className={`fa${this.props.theme==="dark"?"r":"s"} fa-lightbulb theme-${this.props.theme}-bulb`}><small>Light</small></i></DropdownItem>
-            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Need help or guidence?...' onClick={()=>{return this.nav_choice(1)}}><i className="fas fa-question inner-links"><small>Help</small></i></DropdownItem>
-            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Report a bug or problem' onClick={()=>{return this.nav_choice(2)}}><i className="fas fa-flag inner-links"><small>Report</small></i></DropdownItem>
+            <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Need help or guidence?...' onClick={()=>{return this.nav_choice(1)}}><i className="fas fa-question inner-links"><small>Help</small></i></NavLink>
+            <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Report a bug or problem' onClick={()=>{return this.nav_choice(2)}}><i className="fas fa-flag inner-links"><small>Report</small></i></NavLink>
           </DropdownMenu>
         </Dropdown>
           <Dropdown nav isOpen={this.state.dropdownOpen1} toggle={()=>{return this.toggle('dropdownOpen1')}} 
@@ -66,7 +65,7 @@ nav_choice(x){
           >
             <DropdownItem className={`link-x theme-${this.props.theme}`}title='Buy all your adult needs here'><i className="fas fa-store-alt inner-links"><small><NavLink to="/store" className="inner-links">Store</NavLink></small></i></DropdownItem>
             <DropdownItem className={`link-x theme-${this.props.theme}`} title='See Our Blog'><i className="fas fa-comments inner-links"><small><NavLink to="/blog" className="inner-links">Blog</NavLink></small></i></DropdownItem>
-            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Stay Updated' onClick={()=>{return this.nav_choice(3)}}><i className="fas fa-paper-plane"><small>Subscribe</small></i></DropdownItem>
+            <NavLink to="/"  className={`link-x theme-${this.props.theme}`} title='Stay Updated' onClick={()=>{return this.nav_choice(3)}}><i className="fas fa-paper-plane"><small>Subscribe</small></i></NavLink>
 
 
  <Dropdown isOpen={this.state.dropdownOpen3} toggle={()=>{return this.toggle('dropdownOpen3')}} >

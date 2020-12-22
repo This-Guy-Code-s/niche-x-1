@@ -1,0 +1,143 @@
+
+ .scb-card-product-list,
+ .scb-card-product-grid {
+     margin-bottom: 0
+ }
+
+ .scb-card {
+     width: 500px;
+     height:100%;
+     flex:1;
+     position: relative;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-clip: border-box;
+     border-radius: 23px;
+     margin-top: 50px
+ }
+
+ .scb-card-product-grid:hover {
+     -webkit-box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+     box-shadow: 0 0px 0px rgba(153, 153, 153, 0.3);
+     -webkit-transition: .3s;
+     transition: .3s
+ }
+
+ .scb-card-product-grid .scb-img-wrap {
+     border-radius: 0.2rem 0.2rem 0 0;
+     height: 220px
+ }
+
+ .scb-card .scb-img-wrap {
+     overflow: hidden
+ }
+
+ .scb-card-lg .scb-img-wrap {
+     height: 280px
+ }
+
+ .scb-card-product-grid .scb-img-wrap {
+     border-radius: 0.2rem 0.2rem 0 0;
+     height: 275px;
+     padding: 16px
+ }
+
+ [class*='card-product'] .scb-img-wrap img {
+     height: 100%;
+     max-width: 100%;
+     width: auto;
+     display: inline-block;
+     -o-object-fit: cover;
+     object-fit: cover
+ }
+
+ .scb-img-wrap {
+     text-align: center;
+     display: block
+ }
+
+ .scb-card-product-grid .scb-info-wrap {
+     overflow: hidden;
+     padding: 18px 20px
+ }
+
+ [class*='card-product'] a.scb-title {
+     color: #212529;
+     display: block
+ }
+
+ .scb-rating-stars {
+     display: inline-block;
+     vertical-align: middle;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     white-space: nowrap;
+     clear: both
+ }
+
+ .scb-rating-stars li.scb-stars-active {
+     z-index: 2;
+     position: absolute;
+     top: 0;
+     left: 0;
+     overflow: hidden
+ }
+
+ .scb-rating-stars li {
+     display: block;
+     text-overflow: clip;
+     white-space: nowrap;
+     z-index: 1
+ }
+
+ .scb-card-product-grid .scb-bottom-wrap {
+     padding: 18px;
+     border-top: 1px solid #e4e4e4
+ }
+
+ .scb-bottom-wrap-payment {
+     padding: 0px;
+     border-top: 1px solid #e4e4e4
+ }
+
+ .scb-rated {
+     font-size: 10px;
+     color: #b3b4b6
+ }
+
+ .scb-btn {
+     display: inline-block;
+     font-weight: 600;
+     color: #343a40;
+     text-align: center;
+     vertical-align: middle;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     background-color: transparent;
+     border: 1px solid transparent;
+     padding: 0.45rem 0.85rem;
+     font-size: 1rem;
+     line-height: 1.5;
+     border-radius: 0.2rem
+ }
+
+ .scb-btn-primary {
+     color: #fff;
+     background-color: #3167eb;
+     border-color: #3167eb
+ }
+
+ .scb-fas {
+     color: #FF5722
+ }

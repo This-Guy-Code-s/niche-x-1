@@ -6,8 +6,14 @@ import mami_lol from '../util/imgs/x.jpeg'
 import make_acc_img from '../util/imgs/sqrt.jpg'
 import fv1Image from '../util/imgs/fv1.png'
 import fv2Image from '../util/imgs/fv2.png'
+import dudePic from '../util/imgs/dpic.svg'
+import chickPic from '../util/imgs/gpic.svg'
+import quotesImage from '../util/imgs/quoteImage.png'
+import quotesNImage from '../util/imgs/quoteNImage.svg'
 
-import {top_video_urls,notifications,coming_soon,top3_banner,amazon_footer_links} from './data.js'
+
+
+import {top_video_urls,notifications,coming_soon,top3_banner,amazon_footer_links,store_merch} from './data.js'
 import {/*VIDEOS*/LIGHT_MODE,TGL_DRP_DWN} from './actions'
 
 
@@ -29,6 +35,8 @@ const initialState = {
 	top3_banner:window.sessionStorage.top3_banner?window.sessionStorage.top3_banner:top3_banner,
 	//amazon footer links
 	amazon_footer_links:window.sessionStorage.amazon_footer_links?window.sessionStorage.amazon_footer_links:amazon_footer_links,
+	//store page merch
+	store_merch:window.sessionStorage.store_merch?window.sessionStorage.store_merch:store_merch,
 
 	
 	// navbar triggers
@@ -43,6 +51,13 @@ const initialState = {
 	make_acc_img:make_acc_img,
 	store_img:mami_lol,
 	footer_vid:[fv1Image ,fv2Image],
+	dudePic:dudePic,
+	chickPic:chickPic,
+	quotesImage:quotesImage,
+	quotesNImage:quotesNImage,
+
+
+
 
 
 	// dark mode toggles

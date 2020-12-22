@@ -154,8 +154,8 @@ font-size:2rem;
 
 .theme-comp-dark,.theme-comp-dark:hover,.theme-comp-dark:focus{
   border:none;
-  background-color:#111;
-  background:#111;
+  background-color:#333;
+  background:#333;
   -webkit-text-fill-color:#fff;
   color:#fff;
   font-weight:bolder;

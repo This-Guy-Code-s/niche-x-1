@@ -66,11 +66,13 @@ export const notifications = [
 
 
 export const coming_soon = [
-	{
-		title:"chat",
-		msg:"Chat 1 on 1 or in a open chatroom. Choose an icon, choose a name, and send anyone your link to chat totally anonymously.",
-		date:"March 23rd 2021"
-	},
+
+{
+		title:"Your Own Blog",
+		msg:"Generate your blog free. Only info needed here is an email. Make a username, a password, verify email, and you have your own blog page. Post images,Videos, & any fun content you want totally anonymously. ",
+		date:'March 1st 2021'
+	}
+	,
 
 	{
 		title:"facetime",
@@ -79,9 +81,9 @@ export const coming_soon = [
 	},
 
 	{
-		title:"Yor Own Blog",
-		msg:"Generate your blog free. Only info needed here is an email. Make a username, a password, verify email, and you have your own blog page. Post images,Videos, & any fun content you want totally anonymously. ",
-		date:'June 1st 2021'
+		title:"chat",
+		msg:"Chat 1 on 1 or in a open chatroom. Choose an icon, choose a name, and send anyone your link to chat totally anonymously.",
+		date:"June 23rd 2021"
 	}
 
 ]
@@ -167,5 +169,65 @@ export const amazon_footer_links = [
       name:'One Piece',
 		url:'/#'
 	}
+
+]
+
+
+
+
+export const store_merch = [
+	
+
+	{
+
+title:"Yail wrist watch",
+img:"https://i.imgur.com/pjITBzX.jpg",
+price:"$299",
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'toy'
+
+	},
+		{
+
+title:"Dell Xtreme 270",
+img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg",
+price:"$3,999",
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'toy'
+
+	},
+
+
+
+ 
+	{
+
+title:"Yail wrist watch",
+img:"https://i.imgur.com/pjITBzX.jpg",
+price:"$299",
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'toy'
+
+	},
+		{
+
+title:"Dell Xtreme 270",
+img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg",
+price:"$3,999",
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'toy'
+
+	}
+
+   
+
+
+
+
+
 
 ]
