@@ -2,8 +2,7 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {toggle_light,toggle_drp_dwn} from '../redux/actions'
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
-import Modal from './drop-downs/'
+import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 import ToolTip from './tool-tip/'
 
 
@@ -39,6 +38,7 @@ nav_choice(x){
       className={`theme-${this.props.theme}`}
       >
      
+            <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Home Page' ><small className="brandx">$quirt</small></NavLink>
         <Dropdown nav isOpen={this.state.dropdownOpen} toggle={()=>{return this.toggle('dropdownOpen')}} 
         className={`theme-${this.props.theme}`}
         >

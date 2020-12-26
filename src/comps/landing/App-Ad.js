@@ -2,7 +2,6 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {toggle_drp_dwn} from '../../redux/actions'
-import {Link} from 'react-router-dom'
 
 
 class Ad4App extends React.Component{
@@ -58,7 +57,7 @@ return (
     <div className={`meta description theme-${this.props.theme}`}>
       <div className="photo" style={{backgroundImage:`url(${this.props.store_img})`}}></div>
       <ul className="details">
-        <li className="date"><a href="#">Best Quality And Prices</a></li>
+        <li className="date"><a href="/#">Best Quality And Prices</a></li>
         <li className="date">Whole Sales</li>
         <li className="date">
          Affiliated with other shops to keep the best price knowledge

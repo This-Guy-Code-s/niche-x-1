@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux'
 import SmallSC from './SmallSC'
 import BigSC from './BigSC'
@@ -16,6 +16,7 @@ class Merch extends React.Component {
     render(){
 
   return (
+
     <div className="container-fluid merch-par">
     <div className="container merch">
 
@@ -24,14 +25,14 @@ class Merch extends React.Component {
 
 
 {
-  this.props.store_merch.map(merch=>{
+  this.props.store_list.map((merch,i)=>{
      return this.state.window_size?
       (<SmallSC 
 title={merch.title}
 img={merch.img}
 price={merch.price}
 desc={merch.desc}
-
+key={i}
 />)
       :
       (<BigSC 
@@ -40,6 +41,7 @@ img={merch.img}
 price={merch.price}
 type={merch.type}
 desc={merch.desc}
+key={i}
 />)
 
   })

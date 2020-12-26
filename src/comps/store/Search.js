@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux'
 
 
@@ -14,9 +14,9 @@ class Search extends React.Component {
     render(){
 
   return (
-<form onsubmit="event.preventDefault();" role="search" className="search-form">
-  <label for="search">Search for stuff</label>
-  <input id="search" type="search" placeholder="Search..." className={`search-input theme-comp-${this.props.theme}`} autofocus required/>
+<form onSubmit={(e)=>{return e.preventDefault()}} role="search" className="search-form">
+  <label htmlFor="search">Search for stuff</label>
+  <input id="search" type="search" placeholder="Search..." className={`search-input theme-comp-${this.props.theme}`} required/>
   <button type="submit">Go</button>    
 </form>
   );

@@ -1,11 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Video from '../player/'
 
 class Footer extends React.Component{
 constructor(props){
 	super(props)
+    this.state={
 
+    }
 }
 
 
@@ -45,7 +46,7 @@ constructor(props){
                             <h6>Trending This Month</h6>
                             <div className="kilimanjaro_blog_area">
                                 <div className="kilimanjaro_thumb">
-								<a href="https://www.pornhub.com/view_video.php?viewkey=ph57ed85b54be82"><img src={this.props.footer_vid[0]} height="150px"/></a>
+								<a href="https://www.pornhub.com/view_video.php?viewkey=ph57ed85b54be82"><img src={this.props.footer_vid[0]} height="150px" alt="squirt.blog"/></a>
 
                                 </div>
                                 <span>Most Erotic</span>
@@ -54,7 +55,7 @@ constructor(props){
                             </div>
                             <div className="kilimanjaro_blog_area">
                                 <div className="kilimanjaro_thumb">
-								<a href="https://www.pornhub.com/view_video.php?viewkey=ph5f8a7ba96aa57"><img src={this.props.footer_vid[1]} height="150px"/></a>
+								<a href="https://www.pornhub.com/view_video.php?viewkey=ph5f8a7ba96aa57"><img src={this.props.footer_vid[1]} height="150px" alt="squirt.blog"/></a>
                                 </div>
                                 <span>Most Submissive</span>
                                 <p className="kilimanjaro_date">Scralit Scandal</p>

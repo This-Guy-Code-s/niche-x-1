@@ -14,7 +14,7 @@ import quotesNImage from '../util/imgs/quoteNImage.svg'
 
 
 import {top_video_urls,notifications,coming_soon,top3_banner,amazon_footer_links,store_merch} from './data.js'
-import {/*VIDEOS*/LIGHT_MODE,TGL_DRP_DWN} from './actions'
+import {/*VIDEOS*/LIGHT_MODE,TGL_DRP_DWN,STORE_SEARCH} from './actions'
 
 
 
@@ -37,6 +37,8 @@ const initialState = {
 	amazon_footer_links:window.sessionStorage.amazon_footer_links?window.sessionStorage.amazon_footer_links:amazon_footer_links,
 	//store page merch
 	store_merch:window.sessionStorage.store_merch?window.sessionStorage.store_merch:store_merch,
+	//store edit list for search
+	store_list:window.sessionStorage.store_merch?window.sessionStorage.store_merch:store_merch,
 
 	
 	// navbar triggers
@@ -87,6 +89,14 @@ const reducer = (state = initialState, actions) =>{
 				nav_link_2_drp_dwn_bool:actions.payload.bool
 
 			}
+
+		case STORE_SEARCH:
+			return {
+				...state,
+				store_list:actions.payload,
+			}
+
+			
 		default:
 			return state
 	}

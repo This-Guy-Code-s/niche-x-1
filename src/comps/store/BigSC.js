@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+
+import React from 'react';
 import {connect} from 'react-redux'
 
 class BigSC extends React.Component {
@@ -35,8 +36,8 @@ class BigSC extends React.Component {
                  </div>
              </figcaption>
          </div>
-         <div className="scb-bottom-wrap"> <a href="#" className="btn scb-btn btn-primary float-right" data-abc="true"> Buy now </a>
-             <div className="scb-price-wrap"> <a href="#" className="btn scb-btn btn-warning float-left" data-abc="true"> Cancel </a> </div>
+         <div className="scb-bottom-wrap"> <a href="/#" className="btn scb-btn btn-primary float-right" data-abc="true"> Buy now </a>
+             <div className="scb-price-wrap"> <a href="/#" className="btn scb-btn btn-warning float-left" data-abc="true"> Cancel </a> </div>
          </div>
      </figure>
  </div>

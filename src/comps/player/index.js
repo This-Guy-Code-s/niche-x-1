@@ -1,5 +1,4 @@
 import React from 'react'
-import Video from 'react-player'
 
 
 class Player extends React.Component{

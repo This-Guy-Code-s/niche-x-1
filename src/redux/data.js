@@ -185,7 +185,7 @@ img:"https://i.imgur.com/pjITBzX.jpg",
 price:"$299",
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
-type:'toy'
+type:'toys'
 
 	},
 		{
@@ -195,7 +195,7 @@ img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef1
 price:"$3,999",
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
-type:'toy'
+type:'toys'
 
 	},
 
@@ -209,7 +209,7 @@ img:"https://i.imgur.com/pjITBzX.jpg",
 price:"$299",
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
-type:'toy'
+type:'accessories'
 
 	},
 		{
@@ -219,7 +219,7 @@ img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef1
 price:"$3,999",
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
-type:'toy'
+type:'outfits'
 
 	}
 

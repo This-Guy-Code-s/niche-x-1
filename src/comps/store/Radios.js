@@ -1,5 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux'
+import {search_res} from '../../redux/actions'
+
+
 
 class Radios extends React.Component {
     constructor(props){
@@ -7,26 +10,42 @@ class Radios extends React.Component {
         this.state={
           self:Math.floor(Math.random() * 53363)
         }
-
+        this.change_filter=this.change_filter.bind(this)
     }
 
+change_filter(e){
+    console.log(e.target.value)
+    return this.props.search_res(
+      this.props.store_merch,
+      e.target.value,
+      this.props.title.toLowerCase().includes("catagory")?"type":"price",
+      )
 
+}
     render(){
 
   return (
     <div className="pr">
-<h4>Price Range</h4>
+<h4>{this.props.title}</h4>
 
 <form  className="radio-form">
-  <input id="one" type="radio" name="radios" value="one"  className="radio-input"/>
-  <input id="two" type="radio" name="radios" value="two"  className="radio-input"/>
-  <input id="three" type="radio" name="radios" value="three"  className="radio-input"/>
-  <input id="four" type="radio" name="radios" value="four"  className="radio-input"/>
+{
+  this.props.choices.map((chc,i)=>{
+
+        return (<input key={i} id={`${chc}`} type="radio" name="radios" value={`${chc}`}  className="radio-input" onClick={this.change_filter}/>)
+
+  })
+}
+
   <span></span>
-  <label htmlFor="one"  className="radio-label">$200 and Up</label>
-  <label htmlFor="two"  className="radio-label">$100 - $200</label>
-  <label htmlFor="three"  className="radio-label">$50-$100</label>
-  <label htmlFor="four"  className="radio-label">$50 and Under</label>
+  {
+    this.props.choices.map((chc,i)=>{
+
+          return (<label key={i} htmlFor={`${chc}`}  className="radio-label">{`${chc}`}</label>)
+
+    })
+  }
+ 
 </form>
 </div>
   );
@@ -44,5 +63,5 @@ const mapStateToProps = state =>{
 
 export default connect(
     mapStateToProps,
-    {}
+    {search_res}
   )(Radios)

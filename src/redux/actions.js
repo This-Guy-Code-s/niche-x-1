@@ -5,6 +5,8 @@ export const VIDEOS = "VIDEOS"
 export const LIGHT_MODE = "LIGHT_MODE"
 // -------------------DISPLAY NAV LINK STATIC VALUES UPON DROP DOWN---------------------
 export const TGL_DRP_DWN = "TGL_DRP_DWN"
+//------------------STORE SEARCH RESULTS--------------------
+export const STORE_SEARCH = "STORE_SEARCH"
 
 
 
@@ -63,6 +65,119 @@ export const see_catagories = () => dispatch =>{
 export const toggle_drp_dwn = (bool,rend) => dispatch =>{
 	return dispatch({type:TGL_DRP_DWN,payload:{bool:bool,rend:rend}})
 }
+
+
+
+
+
+
+
+
+//------------------STORE SEARCH RESULTS--------------------
+const return_num = async (strr) =>{
+	let str = strr.slice(0,5) 
+	let num = []
+		str.split('').forEach(char=>{
+			if(char === '$' || char === ','){
+				return false
+			}else {
+				return num.push(char)
+			}
+
+		})
+	console.log(num)
+	num = Number(num.join(''))
+	console.log(num)
+	return num
+}
+//type is basically 'catagory'...
+/*
+0 - if up is in str then apply price >= 200
+1 - elif under is in str then apply price <= 50
+2 - elif $50 is in str then apply price >= 50 || price <= 100
+3 - elif $100 is in str then apply price >= 100 || price <= 200
+*/
+// STORE_SEARCH
+export const search_res = (list,filter,type) => dispatch =>{
+	console.log(`filter ${filter} out of `,list, `by ${type}`)
+	let newArr = []
+	let regi = new RegExp(filter,'gi')
+	switch (type) {
+		case "title":
+			break;
+
+		case "type":
+			newArr = list.filter(obj=>regi.test(obj.type))
+			console.log(regi,newArr)
+			return dispatch({type:STORE_SEARCH,payload:newArr})
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+		case "price":
+			// price_filter = return_num(filter)
+			if(filter.includes('up')){
+				console.log(return_num(filter))
+			list.forEach(obj=>{
+			 let x = return_num(obj.price) 
+			 	if(x >= 200)
+			 		return newArr.push(obj)
+
+			})
+			}
+			else if(filter.includes('under')){
+			newArr = list.filter(obj=> return_num(obj.price) <= 50)				
+			}
+			else if(filter.includes('$50')){
+			newArr = list.filter(obj=> return_num(obj.price) >= 50 || return_num(obj.price) <= 100 )
+			}
+			else if(filter.includes('$100')){
+			newArr = list.filter(obj=> return_num(obj.price) >= 100 || return_num(obj.price) <= 200 )
+			}
+			console.log(regi,newArr)
+			return dispatch({type:STORE_SEARCH,payload:newArr})
+		
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE..............*/
+
+		default:
+			return false
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
