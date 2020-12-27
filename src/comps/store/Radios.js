@@ -8,7 +8,6 @@ class Radios extends React.Component {
     constructor(props){
       super(props)
         this.state={
-          self:Math.floor(Math.random() * 53363)
         }
         this.change_filter=this.change_filter.bind(this)
     }

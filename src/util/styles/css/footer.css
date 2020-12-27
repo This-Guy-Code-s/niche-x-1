@@ -73,7 +73,6 @@ ol li, ul li {
     list-style: outside none none;
 }
 .kilimanjaro_widget span, .kilimanjaro_widget a {
-    border: 1px solid #333;
     border-radius: 6px;
     color: #888;
     display: inline-block;
@@ -82,6 +81,18 @@ ol li, ul li {
     padding: 7px 12px;
     cursor:pointer;
 }
+
+.theme-dark .kilimanjaro_widget span,.theme-dark .kilimanjaro_widget a {
+    border: 1px solid #222;
+
+}
+
+.theme-light .kilimanjaro_widget span,.theme-light .kilimanjaro_widget a {
+    border: 1px solid #333;
+
+}
+
+
 ul {
     margin: 0;
     padding: 0;

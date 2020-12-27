@@ -20,15 +20,15 @@ export const STORE_SEARCH = "STORE_SEARCH"
 
 export const toggle_light = () => dispatch =>{
 	console.log('Made IT!!!')
-	if(window.sessionStorage.theme==="dark"){
+	if(window.sessionStorage.theme==="light"){
 		
-		window.sessionStorage.setItem('theme', 'light')
-			return dispatch({type:LIGHT_MODE,payload:"light"})
+		window.sessionStorage.setItem('theme', 'dark')
+			return dispatch({type:LIGHT_MODE,payload:"dark"})
 	}
 
 
-			window.sessionStorage.setItem('theme', 'dark')
-			return dispatch({type:LIGHT_MODE,payload:"dark"})
+			window.sessionStorage.setItem('theme', 'light')
+			return dispatch({type:LIGHT_MODE,payload:"light"})
 }
 
 
@@ -74,22 +74,6 @@ export const toggle_drp_dwn = (bool,rend) => dispatch =>{
 
 
 //------------------STORE SEARCH RESULTS--------------------
-const return_num = async (strr) =>{
-	let str = strr.slice(0,5) 
-	let num = []
-		str.split('').forEach(char=>{
-			if(char === '$' || char === ','){
-				return false
-			}else {
-				return num.push(char)
-			}
-
-		})
-	console.log(num)
-	num = Number(num.join(''))
-	console.log(num)
-	return num
-}
 //type is basically 'catagory'...
 /*
 0 - if up is in str then apply price >= 200
@@ -114,42 +98,24 @@ export const search_res = (list,filter,type) => dispatch =>{
 /*ERROR HERE...PLEASE CONTINUE..............*/
 /*ERROR HERE...PLEASE CONTINUE..............*/
 /*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
 		case "price":
 			// price_filter = return_num(filter)
-			if(filter.includes('up')){
-				console.log(return_num(filter))
-			list.forEach(obj=>{
-			 let x = return_num(obj.price) 
-			 	if(x >= 200)
-			 		return newArr.push(obj)
-
-			})
+			if(regi.test('all')){
+			newArr = list				
 			}
 			else if(filter.includes('under')){
-			newArr = list.filter(obj=> return_num(obj.price) <= 50)				
+			newArr = list.filter(obj=> obj.price_num <= 50)				
 			}
 			else if(filter.includes('$50')){
-			newArr = list.filter(obj=> return_num(obj.price) >= 50 || return_num(obj.price) <= 100 )
+			newArr = list.filter(obj=> obj.price_num >= 50 && obj.price_num <= 100 )
 			}
 			else if(filter.includes('$100')){
-			newArr = list.filter(obj=> return_num(obj.price) >= 100 || return_num(obj.price) <= 200 )
+			newArr = list.filter(obj=> obj.price_num >= 100 && obj.price_num <= 200 )
 			}
 			console.log(regi,newArr)
 			return dispatch({type:STORE_SEARCH,payload:newArr})
 		
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
+			
 /*ERROR HERE...PLEASE CONTINUE..............*/
 /*ERROR HERE...PLEASE CONTINUE..............*/
 /*ERROR HERE...PLEASE CONTINUE..............*/

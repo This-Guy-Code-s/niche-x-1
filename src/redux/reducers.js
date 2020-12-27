@@ -38,7 +38,7 @@ const initialState = {
 	//store page merch
 	store_merch:window.sessionStorage.store_merch?window.sessionStorage.store_merch:store_merch,
 	//store edit list for search
-	store_list:window.sessionStorage.store_merch?window.sessionStorage.store_merch:store_merch,
+	store_list:store_merch,
 
 	
 	// navbar triggers

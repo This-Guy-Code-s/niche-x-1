@@ -29,7 +29,7 @@ class Store extends React.Component {
       <div className="pr-2 mb-8">
       <R4dios
        title="Price Range"
-       choices={["$200 and up", "$100 - $200", "$50 - $100", "$50 and under"]}
+       choices={["All", "$100 - $200", "$50 - $100", "$50 and under"]}
 
        />
       <R4dios
