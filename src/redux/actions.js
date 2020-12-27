@@ -88,7 +88,12 @@ export const search_res = (reset,list,filter,type) => dispatch =>{
 	let regi = new RegExp(filter,'gi')
 	switch (type) {
 		case "title":
-			break;
+			newArr = reset.filter(obj=>regi.test(obj.title))
+			console.log(regi,newArr)
+			if(newArr.length<1){	
+			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
+			}
+			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
 
 		case "type":
 			newArr = list.filter(obj=>regi.test(obj.type))
@@ -97,10 +102,7 @@ export const search_res = (reset,list,filter,type) => dispatch =>{
 			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
 			}
 			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE SOON..............users will have to click twice sometimes*/
 		case "price":
 			// price_filter = return_num(filter)
 			if(regi.test('all')){
@@ -121,12 +123,7 @@ export const search_res = (reset,list,filter,type) => dispatch =>{
 			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
 			}
 			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
-		
-			
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
-/*ERROR HERE...PLEASE CONTINUE..............*/
+/*ERROR HERE...PLEASE CONTINUE SOON..............users will have to click twice sometimes*/
 
 		default:
 			return false

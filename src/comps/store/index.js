@@ -34,7 +34,7 @@ class Store extends React.Component {
        />
       <R4dios
        title="Catagory"
-       choices={["Toys", "Outfits", "Funiture", "Accessories"]}
+       choices={["All", "Outfits", "Toys", "Accessories"]}
 
        />
       </div>
@@ -42,7 +42,7 @@ class Store extends React.Component {
       <Search/>
       </div>
       <Merch/>
-<div className="fixed-bg bg-2 ad" id="home">
+<div className="fixed-bg bg-2 ad srch-ad-footer" id="home">
     <h1><a onClick={(event)=>{return window.setUtmSource(event, this)}} href={this.state.banner.url} border="0"><img border="0" src={this.state.banner.img} alt="Pornhub Header"/></a></h1>
   </div>
     </div>

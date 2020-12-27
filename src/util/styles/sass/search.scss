@@ -11,7 +11,20 @@
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
 }
 
+.theme-search-btn-dark{
+background:#000;
+background-color:#000;
+-webkit-text-fill-color:#fff;
+color:#fff;
+}
 
+
+.theme-search-btn-light{
+background:#fff;
+background-color:#fff;
+-webkit-text-fill-color:#000;
+color:#000;
+}
 // Main styles
 .search-form {
   position: relative;
@@ -41,6 +54,11 @@
   z-index: 1;
   position: relative;
 }
+
+.search-input:focus {
+}
+
+
 button {
   display: none; // prevent being able to tab to it
   position: absolute;
@@ -48,7 +66,6 @@ button {
   right: 0;
   width: var(--btn-width);
   font-weight: bold;
-  background: var(--color-brand);
   border-radius: 0 var(--rad) var(--rad) 0;
 }
 .search-input:not(:placeholder-shown) {

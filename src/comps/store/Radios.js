@@ -11,7 +11,6 @@ class Radios extends React.Component {
           reset:false
         }
         this.change_filter=this.change_filter.bind(this)
-        this.reset=this.reset.bind(this)
     }
 
 change_filter(e){
@@ -26,15 +25,13 @@ change_filter(e){
 }
 
 
-reset(e){
- e.preventDefault()
-
-}
 
 
 componentDidUpdate(){
-  if(this.props.reset===true)
-  return document.querySelector('.all-merch').checked = true
+  if(this.props.reset===true){
+     document.querySelectorAll('.all-merch')[0].checked = true
+    return document.querySelectorAll('.all-merch')[1].checked = true
+  }
 }
 
 
@@ -54,7 +51,7 @@ componentDidUpdate(){
          type="radio"
           name="radios" 
           value={`${chc}`}  
-          className={`radio-input all-merch`} 
+          className={/all/gi.test(chc)?`radio-input all-merch`:`radio-input`} 
           onClick={this.change_filter}
           />)
 

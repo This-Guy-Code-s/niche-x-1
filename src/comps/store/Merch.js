@@ -2,29 +2,38 @@ import React from 'react';
 import {connect} from 'react-redux'
 import SmallSC from './SmallSC'
 import BigSC from './BigSC'
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
+
 
 class Merch extends React.Component {
     constructor(props){
       super(props)
         this.state={
-          window_size:window.innerWidth<700?true:false
+          window_size:window.innerWidth<700?true:false,
+          isOpen:true
         }
+        this.toggle=this.toggle.bind(this)
 
     }
 
+
+
+     toggle(props){
+        this.setState({
+         isOpen:!this.state.isOpen
+        })
+
+}
 
     render(){
 
   return (
 
-    <div className="container-fluid merch-par">
+    <div className="container-fluid ">
     <div className="container merch">
-
-
-
-
-
-{
+     <div className="merch-btn-h"> <Button className="merch-btn" onClick={this.toggle} style={{ marginBottom: '1rem' }}>{this.state.isOpen?"Close":"Open"}</Button></div>
+      <Collapse isOpen={this.state.isOpen}>
+   {
   this.props.store_list.map((merch,i)=>{
      return this.state.window_size?
       (<SmallSC 
@@ -46,10 +55,11 @@ key={i}
 
   })
 }
-</div>
-</div>
-  );
-    }
+      </Collapse>
+    </div>
+    </div>
+  
+  )}
 }
 
 
