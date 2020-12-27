@@ -82,7 +82,7 @@ export const toggle_drp_dwn = (bool,rend) => dispatch =>{
 3 - elif $100 is in str then apply price >= 100 || price <= 200
 */
 // STORE_SEARCH
-export const search_res = (list,filter,type) => dispatch =>{
+export const search_res = (reset,list,filter,type) => dispatch =>{
 	console.log(`filter ${filter} out of `,list, `by ${type}`)
 	let newArr = []
 	let regi = new RegExp(filter,'gi')
@@ -93,7 +93,10 @@ export const search_res = (list,filter,type) => dispatch =>{
 		case "type":
 			newArr = list.filter(obj=>regi.test(obj.type))
 			console.log(regi,newArr)
-			return dispatch({type:STORE_SEARCH,payload:newArr})
+			if(newArr.length<1){	
+			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
+			}
+			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
 /*ERROR HERE...PLEASE CONTINUE..............*/
 /*ERROR HERE...PLEASE CONTINUE..............*/
 /*ERROR HERE...PLEASE CONTINUE..............*/
@@ -113,7 +116,11 @@ export const search_res = (list,filter,type) => dispatch =>{
 			newArr = list.filter(obj=> obj.price_num >= 100 && obj.price_num <= 200 )
 			}
 			console.log(regi,newArr)
-			return dispatch({type:STORE_SEARCH,payload:newArr})
+
+			if(newArr.length<1){	
+			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
+			}
+			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
 		
 			
 /*ERROR HERE...PLEASE CONTINUE..............*/

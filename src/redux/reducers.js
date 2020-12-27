@@ -39,7 +39,8 @@ const initialState = {
 	store_merch:window.sessionStorage.store_merch?window.sessionStorage.store_merch:store_merch,
 	//store edit list for search
 	store_list:store_merch,
-
+	//resetting the bubble in's when list resets
+	reset:false,
 	
 	// navbar triggers
 	nav_link_2_drp_dwn_render:false,
@@ -93,7 +94,8 @@ const reducer = (state = initialState, actions) =>{
 		case STORE_SEARCH:
 			return {
 				...state,
-				store_list:actions.payload,
+				store_list:actions.payload.val,
+				reset:actions.payload.reset
 			}
 
 			

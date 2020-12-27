@@ -8,30 +8,55 @@ class Radios extends React.Component {
     constructor(props){
       super(props)
         this.state={
+          reset:false
         }
         this.change_filter=this.change_filter.bind(this)
+        this.reset=this.reset.bind(this)
     }
 
 change_filter(e){
     console.log(e.target.value)
     return this.props.search_res(
       this.props.store_merch,
+      this.props.store_list,
       e.target.value,
       this.props.title.toLowerCase().includes("catagory")?"type":"price",
       )
 
 }
+
+
+reset(e){
+ e.preventDefault()
+
+}
+
+
+componentDidUpdate(){
+  if(this.props.reset===true)
+  return document.querySelector('.all-merch').checked = true
+}
+
+
     render(){
 
   return (
     <div className="pr">
 <h4>{this.props.title}</h4>
 
-<form  className="radio-form">
+<form  className="radio-form" >
 {
   this.props.choices.map((chc,i)=>{
 
-        return (<input key={i} id={`${chc}`} type="radio" name="radios" value={`${chc}`}  className="radio-input" onClick={this.change_filter}/>)
+        return (<input
+         key={i} 
+         id={`${chc}`}
+         type="radio"
+          name="radios" 
+          value={`${chc}`}  
+          className={`radio-input all-merch`} 
+          onClick={this.change_filter}
+          />)
 
   })
 }
@@ -40,7 +65,10 @@ change_filter(e){
   {
     this.props.choices.map((chc,i)=>{
 
-          return (<label key={i} htmlFor={`${chc}`}  className="radio-label">{`${chc}`}</label>)
+          return (<label 
+            key={i}
+             htmlFor={`${chc}`} 
+              className="radio-label">{`${chc}`}</label>)
 
     })
   }
