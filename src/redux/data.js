@@ -183,22 +183,22 @@ export const store_merch = [
 title:"Yail wrist watch",
 img:"https://i.imgur.com/pjITBzX.jpg",
 price:"$299",
+price_num:299,
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
 type:'toys',
-price_num:299
-
+rate:3
 	},
 		{
 
 title:"Dell Xtreme 270",
 img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg",
 price:"$13",
+price_num:13,
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
 type:'toys',
-price_num:13
-
+rate:4
 	},
 
 
@@ -209,10 +209,11 @@ price_num:13
 title:"Yail wrist watch",
 img:"https://i.imgur.com/pjITBzX.jpg",
 price:"$79",
+price_num:79,
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
 type:'accessories',
-price_num:79
+rate:4
 
 	},
 		{
@@ -220,11 +221,11 @@ price_num:79
 title:"Dell Xtreme 270",
 img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg",
 price:"$150",
+price_num:150,
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
 type:'outfits',
-price_num:150
-
+rate:5
 	}
 
    

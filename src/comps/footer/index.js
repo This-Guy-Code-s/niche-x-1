@@ -16,8 +16,10 @@ constructor(props){
         <div className={`foo_top_header_one section_padding_100_70 theme-comp-${this.props.theme}`} >
             <div className="container">
                 <div className="row">
+
                     <div className="col-12 col-md-6 col-lg-3">
                         <div className="kilimanjaro_part">
+                        <h4 ><span className="top-page-hook" onClick={()=>{return document.querySelector('#naviola').scrollIntoView()}}><i className="far fa-hand-pointer"></i> TOP OF PAGE <i className="far fa-hand-pointer"></i></span></h4>
                             <h4>Quick Store</h4>
                             <p>These are some items you might find useful and the most clicked on items. </p>
                             <p>We affiliate with many other online markets to make sure we display the best price out currently and quickest delivery.</p>

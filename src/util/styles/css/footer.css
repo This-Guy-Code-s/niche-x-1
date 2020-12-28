@@ -1,5 +1,15 @@
 
 /*********footer*******************/
+.top-page-hook{
+    cursor:pointer;
+    font-size:1.5rem;
+}
+
+.top-page-hook i{
+    font-size:2rem;
+}
+
+
 .kilimanjaro_area {
     position: relative;
     z-index: 1;
@@ -13,6 +23,21 @@
 .foo_top_header_one {
     color: #fff;
 }
+
+
+
+
+
+
+.theme-light .kilimanjaro_part  li a{
+border:solid 1px #222;
+}
+
+.theme-dark .kilimanjaro_part  li a{
+border:solid 1px #666;
+}
+
+
 
 .kilimanjaro_part {
     margin-bottom: 30px;

@@ -31,7 +31,7 @@ class Merch extends React.Component {
 
     <div className="container-fluid ">
     <div className="container merch">
-     <div className="merch-btn-h"> <Button className="merch-btn" onClick={this.toggle} style={{ marginBottom: '1rem' }}>{this.state.isOpen?"Close":"Open"}</Button></div>
+     <div className="merch-btn-h"> <button className="btn merch-btn" onClick={this.toggle} style={{ marginBottom: '1rem' }}>{this.state.isOpen?"Close":"Open"}</button></div>
       <Collapse isOpen={this.state.isOpen}>
    {
   this.props.store_list.map((merch,i)=>{
@@ -50,6 +50,7 @@ img={merch.img}
 price={merch.price}
 type={merch.type}
 desc={merch.desc}
+rate={merch.rate}
 key={i}
 />)
 

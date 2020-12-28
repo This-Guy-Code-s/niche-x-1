@@ -26,7 +26,7 @@ class Store extends React.Component {
   return (
     <div className={`theme-${this.props.theme}`}>
       <Quotes msg="Choose your price Range and Catagory, then browse through the amazing deals we find active now." avitar={this.props.dudePic} quotesImage={this.props.quotesImage} quotesNImage={this.props.quotesNImage} />
-      <div className="pr-2 mb-8">
+      <div className="pr-2 mb-8 store-edit-bubblez">
       <R4dios
        title="Price Range"
        choices={["All", "$100 - $200", "$50 - $100", "$50 and under"]}

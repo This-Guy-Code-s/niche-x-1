@@ -33,7 +33,7 @@ nav_choice(x){
 
   return (
         <div 
-         className={`theme-${this.props.theme} naviola`}>
+         className={`theme-${this.props.theme} naviola`} id="naviola">
       <Nav tabs 
       className={`theme-${this.props.theme}`}
       >

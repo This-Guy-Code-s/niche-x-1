@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import ToolTip from '../tool-tip/'
+
+
 
 class SmallSC extends React.Component {
     constructor(props){
@@ -20,7 +23,7 @@ class SmallSC extends React.Component {
         <div className="card-body sc-card-body text-center mx-auto">
             <div className='cvp'>
                 <h5 className="card-title sc-card-title font-weight-bold">{this.props.title}</h5>
-                <p className="card-text sc-card-text">{this.props.price}</p> <a href={this.props.link} className="btn sc-btn sc-details px-auto">{/*USE TOOLTIP*/}view details</a><br /> <a href="/#" className="btn sc-btn sc-cart px-auto">BUY NOW</a>
+                <p className="card-text sc-card-text">{this.props.price}</p> <a href={this.props.link} className="btn sc-btn sc-details px-auto">{/*USE TOOLTIP*/}<ToolTip title="view details" msg={this.props.desc}/></a><br /> <a href="/#" className="btn sc-btn sc-cart px-auto">BUY NOW</a>
             </div>
         </div>
     </div>

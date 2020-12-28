@@ -1,3 +1,4 @@
+
 .pr{
   display:flex;
   flex-direction:column;
@@ -158,4 +159,18 @@
   83% {
     transform: translateY(0.07em) scale(1);
   }
+}
+
+
+  .store-edit-bubblez div{
+margin:30px 10px;
+}
+
+
+@media screen and (min-width:545px){
+  .store-edit-bubblez div{
+margin:30px 50px;
+}
+
+
 }

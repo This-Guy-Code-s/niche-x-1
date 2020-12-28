@@ -27,7 +27,8 @@
 }
 
 .sc-btn {
-    border-radius: 0
+    border-radius: 0;
+    cursor:pointer;
 }
 
 .sc-img-thumbnail {
