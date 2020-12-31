@@ -13,10 +13,23 @@ import quotesNImage from '../util/imgs/quoteNImage.svg'
 
 
 
-import {top_video_urls,notifications,coming_soon,top3_banner,amazon_footer_links,store_merch} from './data.js'
-import {/*VIDEOS*/LIGHT_MODE,TGL_DRP_DWN,STORE_SEARCH} from './actions'
+import {
+	top_video_urls,notifications,coming_soon,
+	top3_banner,amazon_footer_links,store_merch,
+	blog_str8,blog_sissy,blog_lesbian
+} from './data.js'
+import {
+/*VIDEOS*/LIGHT_MODE,TGL_DRP_DWN
+,STORE_SEARCH,NOTIFICATIONS,
+STORE_MERCH,BLOG_POSTS
+} from './actions'
 
 
+
+const blog_list = blog_str8.concat(
+	  blog_sissy,
+	  blog_lesbian
+	  )
 
 
 
@@ -41,7 +54,13 @@ const initialState = {
 	store_list:store_merch,
 	//resetting the bubble in's when list resets
 	reset:false,
-	
+	//blog post run down
+	blog_str8:window.sessionStorage.blog_str8?window.sessionStorage.blog_str8:blog_str8,
+	blog_sissy:window.sessionStorage.blog_sissy?window.sessionStorage.blog_sissy:blog_sissy,
+	blog_lesbian:window.sessionStorage.blog_lesbian?window.sessionStorage.blog_lesbian:blog_lesbian,
+  	blog_posts:blog_list,
+	//currently browsing
+	blog_list:blog_list,
 	// navbar triggers
 	nav_link_2_drp_dwn_render:false,
 	nav_link_2_drp_dwn_bool:false,
@@ -96,6 +115,27 @@ const reducer = (state = initialState, actions) =>{
 				...state,
 				store_list:actions.payload.val,
 				reset:actions.payload.reset
+			}
+
+		case NOTIFICATIONS:
+			return {
+				...state,
+				notifications:actions.payload,
+			}
+
+		case STORE_MERCH:
+			return {
+				...state,
+				store_merch:actions.payload.val,
+			}
+
+		case BLOG_POSTS:
+		console.log(actions.payload)
+			return {
+				...state,
+				blog_list:actions.payload.val,
+				reset:actions.payload.reset
+				
 			}
 
 			

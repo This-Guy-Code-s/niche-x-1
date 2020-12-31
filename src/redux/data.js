@@ -228,10 +228,205 @@ type:'outfits',
 rate:5
 	}
 
-   
+
+]
 
 
 
+
+
+
+
+
+
+
+export const blog_str8 = [
+	
+
+	{
+title:"porn post 11664",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 21 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'news',
+likes:522,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	},
+		{
+
+title:"porn post 11989",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 24 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'news',
+likes:333,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	},
+
+
+
+ 
+	{
+
+
+title:"porn post 11999",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 26 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'pictures',
+likes:113,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+
+	},
+		{
+
+
+title:"porn post 11355",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 27 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'videos',
+likes:414,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	}
+
+
+
+]
+
+
+
+export const blog_sissy = [
+	
+
+	{
+
+title:"porn post 77121",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 21 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'news',
+likes:522,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	},
+		{
+
+title:"porn post 77565",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 24 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'news',
+likes:333,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	},
+
+
+
+ 
+	{
+
+
+title:"porn post 77088",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 26 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'pictures',
+likes:113,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+
+	},
+		{
+
+
+title:"porn post 77345",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 27 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'videos',
+likes:414,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	}
+
+
+
+]
+
+
+
+export const blog_lesbian = [
+	
+
+	{
+
+title:"porn post 44111",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 21 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'news',
+likes:522,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	},
+		{
+
+title:"porn post 44921",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 24 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'news',
+likes:333,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	},
+
+
+
+ 
+	{
+
+
+title:"porn post 44757",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 26 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'pictures',
+likes:113,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+
+	},
+		{
+
+
+title:"porn post 44331",
+img:"https://i.imgur.com/pjITBzX.jpg",
+desc:"some description text fo data zz",
+link:"/#",
+linkx:"/#",
+date:"Mon Dec 27 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
+type:'videos',
+likes:414,
+comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+	}
 
 
 

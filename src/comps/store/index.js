@@ -6,7 +6,7 @@ import '../../util/styles/css/shop-card-sm.css';
 import '../../util/styles/css/shop-card-bg.css';
 import '../../util/styles/sass/search.scss';
 import '../../util/styles/sass/merch.scss';
-import Quotes from '../quotes/'
+import Support from '../support/'
 import R4dios from './Radios'
 import Search from './Search'
 import Merch from './Merch'
@@ -25,7 +25,7 @@ class Store extends React.Component {
 
   return (
     <div className={`theme-${this.props.theme}`}>
-      <Quotes msg="Choose your price Range and Catagory, then browse through the amazing deals we find active now." avitar={this.props.dudePic} quotesImage={this.props.quotesImage} quotesNImage={this.props.quotesNImage} />
+      <Support msg="Choose your price Range and Catagory, then browse through the amazing deals we find active now." avitar={this.props.dudePic} quotesImage={this.props.quotesImage} quotesNImage={this.props.quotesNImage} />
       <div className="pr-2 mb-8 store-edit-bubblez">
       <R4dios
        title="Price Range"

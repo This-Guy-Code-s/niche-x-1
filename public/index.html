@@ -26,6 +26,35 @@
     <div id="root"></div>
     
   </body>
+<script type="text/javascript">
+  
+const[red,green,blue]=[69,111,225],section1=document.querySelector(".scroller");
+window.addEventListener("scroll",()=>{
 
+  let o=1+(window.scrollY||window.pageYOffset)/150;
+ 
+  o=o<1?1:o;
+
+console.log(o)
+  const[e,t,r]=[red/o,green/o,blue/o].map(Math.round);
+
+
+
+  if(window.scrollY>600){
+    section1.style=`
+    display:flex;
+    z-index=111111;
+    `
+  }else{
+    section1.style=`
+    z-index=-11;
+    display:none;
+    `
+  }
+  
+
+
+})
+</script>
 
 </html>

@@ -6,6 +6,7 @@ import Landing from './comps/landing/'
 import Store from './comps/store/'
 import Blog from './comps/blog/'
 import Nav from './comps/Nav'
+import Scroller from './comps/scroller/'
 import Footer from './comps/footer/'
 import {Switch,Route} from 'react-router-dom'
 
@@ -49,6 +50,7 @@ componentDidMount(){
       
       </Switch>
       }
+      <Scroller direction={true} where="naviola" />
       <Footer/>
     </div>
   );

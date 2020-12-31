@@ -1,4 +1,8 @@
 // import axios from 'axios'
+
+
+
+
 // --------------------------SEARCH VIDEOS--------------------
 export const VIDEOS = "VIDEOS"
 // TOGGLE DARK MODE-----------------------------------
@@ -7,6 +11,15 @@ export const LIGHT_MODE = "LIGHT_MODE"
 export const TGL_DRP_DWN = "TGL_DRP_DWN"
 //------------------STORE SEARCH RESULTS--------------------
 export const STORE_SEARCH = "STORE_SEARCH"
+
+
+export const NOTIFICATIONS = "NOTIFICATIONS"
+
+export const STORE_MERCH = "STORE_MERCH"
+
+export const BLOG_POSTS = "BLOG_POSTS"
+
+
 
 
 
@@ -43,21 +56,6 @@ export const toggle_light = () => dispatch =>{
 
 
 
-//--------------------SEE CATAGORIES--------------------------
-
-
-export const see_catagories = () => dispatch =>{
-
-// make fetch call with axios {GET}
-// if like a 200 then return the catagories from type CATAGORIES
-// if like a 403 then return false with type CATAGORIES in which will return an error message
-
-
-}
-
-//--------------------SEE CATAGORIES---------------------------
-
-
 
 
 
@@ -65,10 +63,6 @@ export const see_catagories = () => dispatch =>{
 export const toggle_drp_dwn = (bool,rend) => dispatch =>{
 	return dispatch({type:TGL_DRP_DWN,payload:{bool:bool,rend:rend}})
 }
-
-
-
-
 
 
 
@@ -126,8 +120,76 @@ export const search_res = (reset,list,filter,type) => dispatch =>{
 /*ERROR HERE...PLEASE CONTINUE SOON..............users will have to click twice sometimes*/
 
 		default:
-			return false
+			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
 	}
+}
+
+
+
+
+
+
+/*
+type - type of move to pull here
+
+*/
+export const blog_res = (blog_str8,blog_sissy,blog_lesbian,type,filter,reset,list) => dispatch =>{
+	let obj = {
+	blog_str8,
+	blog_sissy,
+	blog_lesbian
+	}
+	console.log('equiped, ', {
+	blog_str8,
+	blog_sissy,
+	blog_lesbian
+	}, 'based on ',type, 'filter out ',filter, '.....',reset,list)
+	let newArr = []
+
+
+
+
+		switch (type) {
+
+			case 'title':
+				newArr = reset.filter(obj=> new RegExp(filter,'gi').test(obj.title))
+				return dispatch({type:BLOG_POSTS,payload:{val:newArr,reset:false}})
+
+			case 'cat':
+				if(/News/gi.test(filter)){
+					newArr = list.filter(obj=> /News/gi.test(obj.type))
+				}
+				else if(/Pictures/gi.test(filter)){
+					newArr = list.filter(obj=> /Pictures/gi.test(obj.type))
+				}
+
+				else if(/Videos/gi.test(filter)){
+					newArr = list.filter(obj=> /Videos/gi.test(obj.type))
+				}
+
+
+				if(newArr.length<1){
+				return dispatch({type:BLOG_POSTS,payload:{val:reset,reset:true}})
+				}
+				return dispatch({type:BLOG_POSTS,payload:{val:newArr,reset:false}})
+
+
+			case "type":
+				let str = /straight/gi.test(filter)?'blog_str8':
+				/sissy/gi.test(filter)?'blog_sissy':
+				/lesbian/gi.test(filter)?'blog_lesbian':false;
+				console.log(str)
+				if(obj[str]){
+
+				return dispatch({type:BLOG_POSTS,payload:{val:obj[str],reset:false}})
+				}
+				return dispatch({type:BLOG_POSTS,payload:{val:reset,reset:true}})
+
+			default:
+				return dispatch({type:BLOG_POSTS,payload:{val:reset,reset:true}})
+
+
+		}
 }
 
 
@@ -145,15 +207,25 @@ export const search_res = (reset,list,filter,type) => dispatch =>{
 
 
 
+/////////////////////////VERSION 2.0 BELOW////////////////////////
 
 
 
 
 
+//--------------------SEE CATAGORIES--------------------------
 
 
+export const see_catagories = () => dispatch =>{
+
+// make fetch call with axios {GET}
+// if like a 200 then return the catagories from type CATAGORIES
+// if like a 403 then return false with type CATAGORIES in which will return an error message
 
 
+}
+
+//--------------------SEE CATAGORIES---------------------------
 
 
 

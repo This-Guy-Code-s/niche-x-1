@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import SmallSC from './SmallSC'
 import BigSC from './BigSC'
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Collapse } from 'reactstrap';
 
 
 class Merch extends React.Component {

@@ -7,6 +7,25 @@
 
 
 }
+.scroller{
+width:25px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+font-weight:bolder;
+position: fixed;
+left:5px;
+bottom:20%;
+z-index:111111;
+}
+
+.arrowz{
+
+font-size:1.2rem;
+}
+
+
 
 .notify small, .notify{
   cursor:default;
