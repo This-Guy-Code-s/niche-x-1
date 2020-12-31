@@ -61,6 +61,10 @@ const initialState = {
   	blog_posts:blog_list,
 	//currently browsing
 	blog_list:blog_list,
+
+
+
+
 	// navbar triggers
 	nav_link_2_drp_dwn_render:false,
 	nav_link_2_drp_dwn_bool:false,
@@ -130,7 +134,6 @@ const reducer = (state = initialState, actions) =>{
 			}
 
 		case BLOG_POSTS:
-		console.log(actions.payload)
 			return {
 				...state,
 				blog_list:actions.payload.val,

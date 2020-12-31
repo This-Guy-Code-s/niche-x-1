@@ -20,7 +20,9 @@
      word-wrap: break-word;
      background-clip: border-box;
      border-radius: 23px;
-     margin-top: 50px
+     margin-top: 50px;
+    box-shadow:0 0 5px #3e3e3e;
+
  }
 
 

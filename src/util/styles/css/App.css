@@ -7,23 +7,6 @@
 
 
 }
-.scroller{
-width:25px;
-display:flex;
-justify-content:center;
-align-items:center;
-cursor:pointer;
-font-weight:bolder;
-position: fixed;
-left:5px;
-bottom:20%;
-z-index:111111;
-}
-
-.arrowz{
-
-font-size:1.2rem;
-}
 
 
 
@@ -139,11 +122,10 @@ font-size:2rem;
 .link-x:focus,.link-x:hover{
   text-decoration:underline;
   text-underline-position:under;
-  
+  background:rgba(0,0,0,0);
 }
 
-.theme-light,.theme-light:hover,.theme-light:focus{
-  border:none;
+.theme-light{
   background-color:#fff;
   background:#fff;
   -webkit-text-fill-color:#000;
@@ -152,8 +134,7 @@ font-size:2rem;
 }
 
 
-.theme-dark,.theme-dark:hover,.theme-dark:focus{
-  border:none;
+.theme-dark{
   background-color:#000;
   background:#000;
   -webkit-text-fill-color:#fff;
@@ -163,7 +144,6 @@ font-size:2rem;
 
 
 .theme-comp-light,.theme-comp-light:hover,.theme-comp-light:focus{
-  border:none;
   background-color:#0d0d0d;
   background:#0d0d0d;
   -webkit-text-fill-color:#fff;
@@ -172,7 +152,6 @@ font-size:2rem;
 }
 
 .theme-comp-dark,.theme-comp-dark:hover,.theme-comp-dark:focus{
-  border:none;
   background-color:#333;
   background:#333;
   -webkit-text-fill-color:#fff;

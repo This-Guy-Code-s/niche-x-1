@@ -208,8 +208,8 @@ rate:4
 
 title:"Yail wrist watch",
 img:"https://i.imgur.com/pjITBzX.jpg",
-price:"$79",
-price_num:79,
+price:"$123",
+price_num:123,
 link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
 type:'accessories',
@@ -251,8 +251,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 21 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'news',
-likes:522,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"straight",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	},
 		{
 
@@ -263,8 +263,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 24 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'news',
-likes:333,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"straight",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	},
 
 
@@ -280,8 +280,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 26 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'pictures',
-likes:113,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"straight",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 
 	},
 		{
@@ -294,8 +294,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 27 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'videos',
-likes:414,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"straight",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	}
 
 
@@ -316,8 +316,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 21 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'news',
-likes:522,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"sissy",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	},
 		{
 
@@ -328,8 +328,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 24 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'news',
-likes:333,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"sissy",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	},
 
 
@@ -345,8 +345,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 26 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'pictures',
-likes:113,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"sissy",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 
 	},
 		{
@@ -359,8 +359,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 27 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'videos',
-likes:414,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"sissy",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	}
 
 
@@ -381,8 +381,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 21 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'news',
-likes:522,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"lesbian",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	},
 		{
 
@@ -393,8 +393,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 24 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'news',
-likes:333,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"lesbian",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	},
 
 
@@ -410,8 +410,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 26 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'pictures',
-likes:113,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"lesbian",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 
 	},
 		{
@@ -424,8 +424,8 @@ link:"/#",
 linkx:"/#",
 date:"Mon Dec 27 2020 08:24:12 GMT-0500 (Eastern Standard Time)",
 type:'videos',
-likes:414,
-comments:[{name:'Anon',msg:'horny foul shyt said here'}]
+genre:"lesbian",
+comments:[{name:'Anon',date:" Mon Dec 21 2020 08:24:12",msg:'horny foul shyt said here'}]
 	}
 
 

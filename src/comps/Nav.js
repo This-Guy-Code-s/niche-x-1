@@ -49,7 +49,7 @@ nav_choice(x){
            className={`theme-${this.props.theme}`}
            >
             <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Adjust language' onClick={()=>{return this.nav_choice(0)}}><i className="fas fa-globe inner-links"><small>Language</small></i></NavLink>
-            <DropdownItem  className={`link-x theme-${this.props.theme}`} title='Change britghness' onClick={()=>{console.log('clicked!!');return this.props.toggle_light()}}><i className={`fa${this.props.theme==="dark"?"r":"s"} fa-lightbulb theme-${this.props.theme}-bulb`}><small>Light</small></i></DropdownItem>
+            <DropdownItem className={`link-x theme-${this.props.theme}`} title='Change britghness' onClick={()=>{return this.props.toggle_light()}}><i className={`fa${this.props.theme==="dark"?"r":"s"} fa-lightbulb theme-${this.props.theme}-bulb`}><small>Light</small></i></DropdownItem>
             <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Need help or guidence?...' onClick={()=>{return this.nav_choice(1)}}><i className="fas fa-question inner-links"><small>Help</small></i></NavLink>
             <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Report a bug or problem' onClick={()=>{return this.nav_choice(2)}}><i className="fas fa-flag inner-links"><small>Report</small></i></NavLink>
           </DropdownMenu>

@@ -32,7 +32,6 @@ export const BLOG_POSTS = "BLOG_POSTS"
 // TOGGLE DARK MODE-----------------------------------
 
 export const toggle_light = () => dispatch =>{
-	console.log('Made IT!!!')
 	if(window.sessionStorage.theme==="light"){
 		
 		window.sessionStorage.setItem('theme', 'dark')
@@ -76,52 +75,28 @@ export const toggle_drp_dwn = (bool,rend) => dispatch =>{
 3 - elif $100 is in str then apply price >= 100 || price <= 200
 */
 // STORE_SEARCH
-export const search_res = (reset,list,filter,type) => dispatch =>{
-	console.log(`filter ${filter} out of `,list, `by ${type}`)
-	let newArr = []
-	let regi = new RegExp(filter,'gi')
-	switch (type) {
-		case "title":
-			newArr = reset.filter(obj=>regi.test(obj.title))
-			console.log(regi,newArr)
-			if(newArr.length<1){	
-			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
-			}
-			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
-
-		case "type":
-			newArr = list.filter(obj=>regi.test(obj.type))
-			console.log(regi,newArr)
-			if(newArr.length<1){	
-			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
-			}
-			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
-/*ERROR HERE...PLEASE CONTINUE SOON..............users will have to click twice sometimes*/
-		case "price":
-			// price_filter = return_num(filter)
-			if(regi.test('all')){
-			newArr = list				
-			}
-			else if(filter.includes('under')){
-			newArr = list.filter(obj=> obj.price_num <= 50)				
-			}
-			else if(filter.includes('$50')){
-			newArr = list.filter(obj=> obj.price_num >= 50 && obj.price_num <= 100 )
-			}
-			else if(filter.includes('$100')){
-			newArr = list.filter(obj=> obj.price_num >= 100 && obj.price_num <= 200 )
-			}
-			console.log(regi,newArr)
-
-			if(newArr.length<1){	
-			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
-			}
-			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
-/*ERROR HERE...PLEASE CONTINUE SOON..............users will have to click twice sometimes*/
-
-		default:
-			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
-	}
+export const search_res = (reset,list,filter,type,cat_or_price_filter) => dispatch =>{
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
 }
 
 
@@ -130,23 +105,24 @@ export const search_res = (reset,list,filter,type) => dispatch =>{
 
 
 /*
-type - type of move to pull here
+kinda freestyled this part...will add doc soon, after extra tweaking and thinkin.
 
 */
-export const blog_res = (blog_str8,blog_sissy,blog_lesbian,type,filter,reset,list) => dispatch =>{
+export const blog_res = (blog_str8,blog_sissy,blog_lesbian,type,filter,reset,list,cat_or_type_filter) => dispatch =>{
 	let obj = {
 	blog_str8,
 	blog_sissy,
-	blog_lesbian
+	blog_lesbian,
+	list
 	}
-	console.log('equiped, ', {
-	blog_str8,
-	blog_sissy,
-	blog_lesbian
-	}, 'based on ',type, 'filter out ',filter, '.....',reset,list)
+
+	let str;
+	// console.log('equiped, ', {
+	// blog_str8,
+	// blog_sissy,
+	// blog_lesbian
+	// }, 'based on ',type, 'filter out ',filter, '.....',reset,list)
 	let newArr = []
-
-
 
 
 		switch (type) {
@@ -156,34 +132,45 @@ export const blog_res = (blog_str8,blog_sissy,blog_lesbian,type,filter,reset,lis
 				return dispatch({type:BLOG_POSTS,payload:{val:newArr,reset:false}})
 
 			case 'cat':
+				 str = /straight/gi.test(cat_or_type_filter)?'blog_str8':
+				/sissy/gi.test(cat_or_type_filter)?'blog_sissy':
+				/lesbian/gi.test(cat_or_type_filter)?'blog_lesbian':'list';
+
 				if(/News/gi.test(filter)){
-					newArr = list.filter(obj=> /News/gi.test(obj.type))
+					if(obj[str]){
+					newArr = obj[str].filter(obj=> /News/gi.test(obj.type))
+					}
 				}
 				else if(/Pictures/gi.test(filter)){
-					newArr = list.filter(obj=> /Pictures/gi.test(obj.type))
+					if(obj[str]){
+					newArr = obj[str].filter(obj=> /Pictures/gi.test(obj.type))
+					}
 				}
 
 				else if(/Videos/gi.test(filter)){
-					newArr = list.filter(obj=> /Videos/gi.test(obj.type))
+					if(obj[str]){
+					newArr = obj[str].filter(obj=> /Videos/gi.test(obj.type))
+					}
 				}
 
 
 				if(newArr.length<1){
 				return dispatch({type:BLOG_POSTS,payload:{val:reset,reset:true}})
-				}
+				}				
 				return dispatch({type:BLOG_POSTS,payload:{val:newArr,reset:false}})
 
 
+
 			case "type":
-				let str = /straight/gi.test(filter)?'blog_str8':
+				 str = /straight/gi.test(filter)?'blog_str8':
 				/sissy/gi.test(filter)?'blog_sissy':
-				/lesbian/gi.test(filter)?'blog_lesbian':false;
-				console.log(str)
+				/lesbian/gi.test(filter)?'blog_lesbian':'list';
 				if(obj[str]){
 
 				return dispatch({type:BLOG_POSTS,payload:{val:obj[str],reset:false}})
 				}
 				return dispatch({type:BLOG_POSTS,payload:{val:reset,reset:true}})
+
 
 			default:
 				return dispatch({type:BLOG_POSTS,payload:{val:reset,reset:true}})

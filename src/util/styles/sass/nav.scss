@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lobster&display=swap');
 
+
+
+.nav{
+  border:none;
+}
 .naviola *{
   font-size: 1.3rem; 
   i{
@@ -85,10 +90,7 @@ Sidebar Nav
         padding: 1.05em	1em;
         position: relative;
         display:block;
-        
-        &:hover{
-          background-color: rgba(0,0,0,0.9);
-        }
+ 
       }
 /* -------------
 Sidebar: icons

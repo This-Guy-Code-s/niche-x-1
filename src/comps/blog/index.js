@@ -4,12 +4,13 @@ import '../../util/styles/css/quote.css';
 import '../../util/styles/css/radio.css';
 import '../../util/styles/css/shop-card-sm.css';
 import '../../util/styles/css/shop-card-bg.css';
+import '../../util/styles/css/blog-comments.css';
 import '../../util/styles/sass/search.scss';
 import '../../util/styles/sass/merch.scss';
 import Support from '../support/'
 import R4dios from './Radios'
 import Search from './Search'
-import Merch from './Post'
+import Post from './Post'
 
 class Blog extends React.Component {
     constructor(props){
@@ -43,7 +44,7 @@ class Blog extends React.Component {
       <div className="pr-2 mb-4">
       <Search/>
       </div>
-      <Merch/>
+      <Post/>
 <div className="fixed-bg bg-2 ad srch-ad-footer">
     <h1><a onClick={(event)=>{return window.setUtmSource(event, this)}} href={this.state.banner.url} border="0"><img border="0" src={this.state.banner.img} alt="Pornhub Header"/></a></h1>
   </div>

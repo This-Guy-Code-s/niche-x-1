@@ -74,6 +74,7 @@ date={post.date}
 type={post.type}
 likes={post.likes}
 comments={post.comments}
+genre={post.genre}
 key={i}
 />)
       :
@@ -87,6 +88,7 @@ date={post.date}
 type={post.type}
 likes={post.likes}
 comments={post.comments}
+genre={post.genre}
 key={i}
 />)
 

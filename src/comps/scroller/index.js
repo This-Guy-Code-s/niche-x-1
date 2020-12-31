@@ -31,7 +31,7 @@ class Scroller extends React.Component{
 
 	render(){
   return (
-    <Alert className={`scroller theme-${this.props.theme==='dark'?'light':'dark'}`} onClick={this.scroll_2} >
+    <Alert className={`scroller theme-scroller-${this.props.theme}`} onClick={this.scroll_2} >
     {
     	this.props.direction?
     	(<i className="fas fa-angle-double-up arrowz" ></i>)

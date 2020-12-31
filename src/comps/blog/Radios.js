@@ -15,14 +15,21 @@ class Radios extends React.Component {
 
 change_filter(e){
     console.log(e.target.value)
+
+    if(!this.props.title.toLowerCase().includes("catagory")){
+      document.querySelector('.all-merch-cat').checked = true
+    }
+
+
     return this.props.blog_res(
       this.props.blog_str8,
       this.props.blog_sissy,
       this.props.blog_lesbian,
       this.props.title.toLowerCase().includes("catagory")?"cat":"type",
       e.target.value,
-      this.props.blog_posts,
-      this.props.blog_list,
+      this.props.title.toLowerCase().includes("catagory")?this.props.blog_posts:this.props.blog_list,
+      this.props.title.toLowerCase().includes("catagory")?this.props.blog_list:this.props.blog_posts,
+      this.props.blog_list.length!==this.props.blog_posts.length?this.props.blog_list[0].genre:'list',
       )
 }
 
@@ -53,7 +60,7 @@ componentDidUpdate(){
          type="radio"
           name="radios" 
           value={`${chc}`}  
-          className={/all/gi.test(chc)?`radio-input all-merch`:`radio-input`} 
+          className={/all/gi.test(chc) && this.props.title.toLowerCase().includes("catagory")?`radio-input all-merch all-merch-cat`:/all/gi.test(chc)?`radio-input all-merch`:`radio-input`} 
           onClick={this.change_filter}
           />)
 
