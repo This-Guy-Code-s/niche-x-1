@@ -25,7 +25,6 @@ change_filter(e){
       this.props.store_list,
       e.target.value,
       this.props.title.toLowerCase().includes("catagory")?"cat":"price",
-      e.target.value,
       )
 
 }

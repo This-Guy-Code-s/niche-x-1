@@ -75,28 +75,87 @@ export const toggle_drp_dwn = (bool,rend) => dispatch =>{
 3 - elif $100 is in str then apply price >= 100 || price <= 200
 */
 // STORE_SEARCH
-export const search_res = (reset,list,filter,type,cat_or_price_filter) => dispatch =>{
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
-	///REDO THE ENTIRE STORE SEARCH FLOW AND USE SUDO CODE!!!!!!!!!!!!!!!!!!!!!!
+export const search_res = (reset,list,filter,type) => dispatch =>{
+	console.log(`filter ${filter} out of `,list, `by ${type}`)
+
+//returned values should be in this shape for reducer
+// {val:newArr,reset:false}
+
+//the returned array after code is done
+let newArr = []
+
+
+
+
+switch(type){
+
+
+
+	case 'title':
+		newArr = reset.filter(obj=> new RegExp(filter,'gi').test(obj.title))
+		return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
+
+	
+
+	
+	case 'price':
+
+		if(/all/gi.test(filter)){
+			window.sessionStorage.setItem('price_filter_4_cat','All')
+			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
+		}
+		else if(Number(filter.slice(1,4))===100){
+			window.sessionStorage.setItem('price_filter_4_cat','$100 - $200')
+			newArr = reset.filter(obj=>obj.price_num >= 100 && obj.price_num <= 200)
+		}
+		else if(/under/gi.test(filter)){
+			window.sessionStorage.setItem('price_filter_4_cat','$50 - $100')
+			newArr = reset.filter(obj=>obj.price_num <= 50)
+		}
+		
+		else if(Number(filter.slice(1,4))===50){
+			window.sessionStorage.setItem('price_filter_4_cat','$50 and under')
+			newArr = reset.filter(obj=>obj.price_num >= 50 && obj.price_num <= 100)
+		}
+
+			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
+		
+
+
+
+
+
+
+	case 'cat':
+	if(!window.sessionStorage.price_filter_4_cat){
+		window.sessionStorage.price_filter_4_cat='All'
+	}
+
+		if(/all/gi.test(window.sessionStorage.price_filter_4_cat)){
+			return dispatch({type:STORE_SEARCH,payload:{val:reset,reset:true}})
+		}
+		else if(Number(window.sessionStorage.price_filter_4_cat.slice(1,4))===100){
+			newArr = reset.filter(obj=>obj.price_num >= 100 && obj.price_num <= 200)
+		}
+		else if(/under/gi.test(window.sessionStorage.price_filter_4_cat)){
+			newArr = reset.filter(obj=>obj.price_num <= 50)
+		}
+		
+		else if(Number(window.sessionStorage.price_filter_4_cat.slice(1,4))===50){
+			newArr = reset.filter(obj=>obj.price_num >= 50 && obj.price_num <= 100)
+		}
+
+
+		newArr = newArr.filter(obj=>new RegExp(filter,'gi').test(obj.type))
+
+			return dispatch({type:STORE_SEARCH,payload:{val:newArr,reset:false}})
+		
+
+		default:
+		return false
+
+
+	}
 }
 
 

@@ -226,7 +226,59 @@ link:"/#",
 desc:"some random description wiith typos im sure so fuck it...",
 type:'outfits',
 rate:5
+	},
+
+
+	{
+
+title:"Yail wrist watch",
+img:"https://i.imgur.com/pjITBzX.jpg",
+price:"$299",
+price_num:299,
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'toys',
+rate:3
+	},
+		{
+
+title:"Dell Xtreme 270",
+img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg",
+price:"$72",
+price_num:72,
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'toys',
+rate:4
+	},
+
+
+
+ 
+	{
+
+title:"Yail wrist watch",
+img:"https://i.imgur.com/pjITBzX.jpg",
+price:"$22",
+price_num:22,
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'accessories',
+rate:4
+
+	},
+		{
+
+title:"Dell Xtreme 270",
+img:"https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg",
+price:"$64",
+price_num:64,
+link:"/#",
+desc:"some random description wiith typos im sure so fuck it...",
+type:'outfits',
+rate:5
 	}
+
 
 
 ]
