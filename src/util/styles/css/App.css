@@ -9,6 +9,11 @@
 }
 
 
+html{
+  scroll-behavior: smooth;
+  
+}
+
 
 .notify small, .notify{
   cursor:default;

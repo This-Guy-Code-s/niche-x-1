@@ -202,7 +202,7 @@ span.forum-item-title:hover, a.forum-item-title:hover {
 
 .scroller{
 width:25px;
-display:flex;
+display:none;
 justify-content:center;
 align-items:center;
 cursor:pointer;

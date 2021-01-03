@@ -63,6 +63,37 @@ componentDidMount(){
       </article>
     </a>
   </div>
+    <div className={`item-1 item-all `}>
+    <a href={this.props.top_vidz[3].url} className={`card theme-comp2-${this.props.theme}`}>
+      <div className="thumb" ></div>
+      <Video url={this.props.top_vidz[3].url} height={window.innerWidth<700?"240px":"350px"}/>
+      <article>
+        <h1>{this.props.top_vidz[3].desc}</h1>
+        <span>{this.props.top_vidz[3].star}</span>
+      </article>
+    </a>
+  </div>
+
+  <div className={`item-3 item-all `}>
+   <a href={this.props.top_vidz[2].url} className={`card theme-comp2-${this.props.theme}`}>
+      <div className="thumb" ></div>
+      <Video url={this.props.top_vidz[2].url} height="240px"/>
+      <article>
+        <h1>{this.props.top_vidz[2].desc}</h1>
+        <span>{this.props.top_vidz[2].star}</span>
+      </article>
+    </a>
+  </div>
+  <div className={`item-3 item-all `}>
+   <a href={this.props.top_vidz[2].url} className={`card theme-comp2-${this.props.theme}`}>
+      <div className="thumb" ></div>
+      <Video url={this.props.top_vidz[2].url} height="240px"/>
+      <article>
+        <h1>{this.props.top_vidz[2].desc}</h1>
+        <span>{this.props.top_vidz[2].star}</span>
+      </article>
+    </a>
+  </div>
   </div>
 
 

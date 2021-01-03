@@ -28,6 +28,7 @@ class Blog extends React.Component {
 
   return (
     <div className={`theme-${this.props.theme}`}>
+   
       <Support msg="Welcome, Here's our latest blog post, you can search post as well. Feel free to give a like and/or comment your thoughts." avitar={this.props.chickPic} quotesImage={this.props.quotesImage} quotesNImage={this.props.quotesNImage} />
       <div className="pr-2 mb-8 store-edit-bubblez">
       <R4dios
@@ -44,6 +45,7 @@ class Blog extends React.Component {
       <div className="pr-2 mb-4">
       <Search/>
       </div>
+      
       <Post/>
 <div className="fixed-bg bg-2 ad srch-ad-footer">
     <h1><a onClick={(event)=>{return window.setUtmSource(event, this)}} href={this.state.banner.url} border="0"><img border="0" src={this.state.banner.img} alt="Pornhub Header"/></a></h1>

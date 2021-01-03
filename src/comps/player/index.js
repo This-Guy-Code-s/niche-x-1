@@ -12,7 +12,7 @@ class Player extends React.Component{
 
 
 componentDidMount(){
-  console.log(this.props)
+  console.log('videos ##############33',this.props)
 }
 
 
@@ -20,7 +20,7 @@ componentDidMount(){
 
   return (
     <div className="container vidx-h">
-     <embed src={this.props.url}
+     <embed src={this.props.url && this.props.url}
      controls={true}
      volume={1}
      className="vidx"

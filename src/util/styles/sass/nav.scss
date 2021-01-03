@@ -5,12 +5,43 @@
 
 .nav{
   border:none;
+  border-bottom:double;
+  padding-bottom:5px;
+  position:fixed;
+  top:0;
+  left:0;
+  min-width:100%;
+  z-index: 1;
+    display:flex;
+  align-items:center;
+}
+
+
+.naviola{
+  z-index:2
 }
 .naviola *{
-  font-size: 1.3rem; 
+  font-size: 1.2rem; 
+
+  .nav-main-link{
+  box-shadow:0 0 .5px #e3e3e3;
+  margin:0px 5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  }
+
+ .nav-main-linkx{
+  margin:0px 5px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  }
+
   i{
   text-shadow:0 0 5px lightgray;
-  
+  margin:5px;
   &:hover{
   }
 }
@@ -140,5 +171,14 @@ Hover
   & ul > li:hover{
       .nav-flyout{
     }
+  }
+}
+
+
+
+
+@media screen and (max-width:700px){
+  .extra-nav-link{
+    display:none;
   }
 }

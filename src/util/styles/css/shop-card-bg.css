@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap');
+ 
+
+
+.type-font{
+     font-family: 'Libre Barcode 39 Extended Text', cursive;
+}
+
+
 
  .scb-card-product-list,
  .scb-card-product-grid {
@@ -21,8 +30,7 @@
      background-clip: border-box;
      border-radius: 23px;
      margin-top: 50px;
-    box-shadow:0 0 5px #3e3e3e;
-
+     box-shadow:0 0 5px #3e3e3e;
  }
 
 
@@ -103,12 +111,12 @@
 
  .scb-card-product-grid .scb-bottom-wrap {
      padding: 18px;
-     border-top: 1px solid #e4e4e4
+     border-top: 1px solid #3e3e3e
  }
 
  .scb-bottom-wrap-payment {
      padding: 0px;
-     border-top: 1px solid #e4e4e4
+     border-top: 1px solid #3e3e3e
  }
 
  .scb-rated {
@@ -133,9 +141,27 @@
      line-height: 1.5;
      border-radius: 0.2rem;
      cursor:pointer;
+     box-shadow:0 0 2px #3e3e3e;
+ }
+
+ .scb-btn:hover{
+     box-shadow:0 0 .5px #3e3e3e;
  }
 
 
  .scb-fas {
      color: #FF5722
+ }
+
+
+
+ .scb-card:hover{
+         box-shadow:0 0 10px #3e3e3e;
+
+ }
+
+
+ .fa-star{
+     -webkit-text-fill-color:gold;
+     color:gold;
  }

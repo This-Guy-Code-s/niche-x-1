@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {toggle_light,toggle_drp_dwn} from '../redux/actions'
 import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 import ToolTip from './tool-tip/'
-
+import Ashes from './animation-glitches/Ashes'
 
 class Navigation extends React.Component{
   constructor(props){
@@ -34,16 +34,18 @@ nav_choice(x){
   return (
         <div 
          className={`theme-${this.props.theme} naviola`} id="naviola">
+         <Ashes/>
+         
       <Nav tabs 
       className={`theme-${this.props.theme}`}
       >
      
-            <NavLink to="/" className={`link-x theme-${this.props.theme}`} title='Home Page' ><small className="brandx">$quirt</small></NavLink>
+            <NavLink to="/" className={`link-x theme-${this.props.theme} nav-main-linkx brandx `} title='Home Page' >$quirt <i className="fas fa-home extra-nav-link"></i></NavLink>
         <Dropdown nav isOpen={this.state.dropdownOpen} toggle={()=>{return this.toggle('dropdownOpen')}} 
         className={`theme-${this.props.theme}`}
         >
-          <DropdownToggle nav caret className={`theme-${this.props.theme}`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
-            <i className={`fas fa-sliders-h theme-${this.props.theme}`}></i>
+          <DropdownToggle nav caret className={`theme-${this.props.theme} nav-main-link`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
+            <span className="extra-nav-link">Settings</span><i className={`fas fa-sliders-h theme-${this.props.theme}`}></i>
           </DropdownToggle>
            <DropdownMenu 
            className={`theme-${this.props.theme}`}
@@ -57,8 +59,8 @@ nav_choice(x){
           <Dropdown nav isOpen={this.state.dropdownOpen1} toggle={()=>{return this.toggle('dropdownOpen1')}} 
           className={`theme-${this.props.theme}`}
           >
-          <DropdownToggle nav caret className={`theme-${this.props.theme}`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
-            <i className={`fas fa-user-circle theme-${this.props.theme}`}></i>
+          <DropdownToggle nav caret className={`theme-${this.props.theme} nav-main-link`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
+            <span className="extra-nav-link">Menu</span><i className={`fas fa-user-circle theme-${this.props.theme}`}></i>
           </DropdownToggle>
           <DropdownMenu 
           className={`theme-${this.props.theme}`}
@@ -69,7 +71,7 @@ nav_choice(x){
 
 
  <Dropdown isOpen={this.state.dropdownOpen3} toggle={()=>{return this.toggle('dropdownOpen3')}} >
-      <DropdownToggle caret className={`theme-${this.props.theme}`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
+      <DropdownToggle caret className={`theme-${this.props.theme} nav-main-link`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
        <i className="fas fa-brain"  title='Whats Coming Next?...' ><small>Coming Soon...</small></i>
         </DropdownToggle>
       <DropdownMenu className={`theme-${this.props.theme}`}>
@@ -108,8 +110,8 @@ nav_choice(x){
         <Dropdown nav isOpen={this.state.dropdownOpen2} toggle={()=>{return this.toggle('dropdownOpen2')}} 
         className={`theme-${this.props.theme}`}
         >
-          <DropdownToggle nav caret className={`theme-${this.props.theme}`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
-            <i className={`fas fa-bell outter-links theme-${this.props.theme}`}></i>
+          <DropdownToggle nav caret className={`theme-${this.props.theme} nav-main-link`} style={{background:this.props.theme==="dark"?"#000":"#fff",backgroundColor:this.props.theme==="dark"?"#000":"#fff",}}>
+            <span className="extra-nav-link">Notifications</span><i className={`fas fa-bell outter-links theme-${this.props.theme}`}></i>
           </DropdownToggle>
           <DropdownMenu 
           className={`theme-${this.props.theme} `}
@@ -139,7 +141,9 @@ nav_choice(x){
 
           </DropdownMenu>
         </Dropdown>
+
       </Nav>
+
     </div>
   );
 }
